@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artikel Kesehatan & Tanaman Obat Jawa Timur | Kayon Gallery Herbal</title>
+<meta name="description" content="Kumpulan artikel kesehatan dan panduan tanaman obat tradisional dari Jawa Timur oleh Kayon Gallery Herbal Kediri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --hijau-tua: #1a4731;
+    --hijau-mid: #2d6a4f;
+    --hijau-muda: #52b788;
+    --hijau-terang: #95d5b2;
+    --krem: #f8f4e8;
+    --krem-gelap: #ede8d5;
+    --coklat: #8b5e3c;
+    --emas: #c9a84c;
+    --putih: #fefefe;
+    --abu: #6b7280;
+    --teks: #1f2937;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--krem);
+    color: var(--teks);
+    line-height: 1.7;
+  }
+
+  /* ── NAVBAR ── */
+  nav {
+    background: var(--hijau-tua);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--hijau-terang);
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-style: italic;
+  }
+  .nav-logo span { color: var(--emas); font-style: normal; }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a {
+    color: #d1fae5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--emas); }
+  .nav-wa {
+    background: #25d366;
+    color: white !important;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--hijau-tua) 0%, var(--hijau-mid) 60%, #40916c 100%);
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 140%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(149,213,178,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(201,168,76,0.2);
+    border: 1px solid var(--emas);
+    color: var(--emas);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .hero h1 em { color: var(--hijau-terang); font-style: italic; }
+  .hero p {
+    color: #d1fae5;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-weight: 300;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--emas);
+  }
+  .hero-stat span { color: #a7f3d0; font-size: 0.85rem; }
+
+  /* ── FILTER TABS ── */
+  .filter-section {
+    background: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 60px;
+    z-index: 90;
+  }
+  .tab-btn {
+    padding: 0.5rem 1.2rem;
+    border: 2px solid var(--krem-gelap);
+    background: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--abu);
+    transition: all 0.25s;
+  }
+  .tab-btn:hover, .tab-btn.active {
+    background: var(--hijau-mid);
+    border-color: var(--hijau-mid);
+    color: white;
+  }
+
+  /* ── GRID ARTIKEL ── */
+  .artikel-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--hijau-tua);
+    margin-bottom: 0.3rem;
+  }
+  .section-title em { color: var(--emas); font-style: italic; }
+  .section-sub {
+    color: var(--abu);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--krem-gelap);
+  }
+  .artikel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.8rem;
+  }
+
+  /* ── KARTU ARTIKEL ── */
+  .kartu {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(26,71,49,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .kartu:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(26,71,49,0.15);
+  }
+  .kartu-emoji {
+    background: linear-gradient(135deg, var(--hijau-mid), var(--hijau-tua));
+    padding: 2rem;
+    text-align: center;
+    font-size: 3.5rem;
+    position: relative;
+  }
+  .kartu-emoji.tanaman {
+    background: linear-gradient(135deg, #40916c, #1b4332);
+  }
+  .kartu-badge {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    background: var(--emas);
+    color: var(--hijau-tua);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 12px;
+  }
+  .kartu-body { padding: 1.4rem; flex: 1; display: flex; flex-direction: column; }
+  .kartu-kategori {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--hijau-mid);
+    margin-bottom: 0.5rem;
+  }
+  .kartu-judul {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--hijau-tua);
+    margin-bottom: 0.7rem;
+    line-height: 1.3;
+  }
+  .kartu-ringkasan {
+    color: var(--abu);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+  .kartu-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--krem-gelap);
+  }
+  .kartu-meta { font-size: 0.78rem; color: #9ca3af; }
+  .btn-baca {
+    background: var(--hijau-mid);
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Source Sans 3', sans-serif;
+    transition: background 0.2s;
+  }
+  .btn-baca:hover { background: var(--hijau-tua); }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15,30,20,0.75);
+    z-index: 1000;
+    padding: 1rem;
+    overflow-y: auto;
+    backdrop-filter: blur(4px);
+  }
+  .modal-overlay.aktif { display: flex; align-items: flex-start; justify-content: center; }
+  .modal {
+    background: var(--putih);
+    border-radius: 20px;
+    max-width: 780px;
+    width: 100%;
+    margin: 2rem auto;
+    overflow: hidden;
+    animation: slideUp 0.35s ease;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .modal-header {
+    background: linear-gradient(135deg, var(--hijau-tua), var(--hijau-mid));
+    padding: 2.5rem 2rem 2rem;
+    position: relative;
+  }
+  .modal-header .emoji { font-size: 3rem; display: block; margin-bottom: 0.8rem; }
+  .modal-kategori {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--emas);
+    margin-bottom: 0.4rem;
+  }
+  .modal-judul {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: white;
+    line-height: 1.25;
+  }
+  .modal-tutup {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .modal-tutup:hover { background: rgba(255,255,255,0.3); }
+  .modal-content { padding: 2rem; }
+  .modal-content h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--hijau-tua);
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.5rem;
+    border-left: 3px solid var(--emas);
+    padding-left: 0.8rem;
+  }
+  .modal-content p { color: #374151; font-size: 0.95rem; line-height: 1.8; margin-bottom: 0.8rem; }
+  .modal-content ul { padding-left: 1.2rem; margin-bottom: 1rem; }
+  .modal-content ul li { color: #374151; font-size: 0.95rem; line-height: 1.8; margin-bottom: 0.3rem; }
+  .modal-content .highlight-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--hijau-tua);
+  }
+  .modal-content .warning-box {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 10px;
+    padding: 0.8rem 1.2rem;
+    margin: 1rem 0;
+    font-size: 0.88rem;
+    color: #92400e;
+  }
+  .modal-wa-btn {
+    display: block;
+    width: 100%;
+    background: #25d366;
+    color: white;
+    text-align: center;
+    padding: 0.9rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+  }
+  .modal-wa-btn:hover { background: #1da851; }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: linear-gradient(135deg, var(--hijau-tua), #0d2b1a);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0.8rem;
+  }
+  .cta-section p { color: #a7f3d0; margin-bottom: 1.5rem; font-size: 1rem; }
+  .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-wa {
+    background: #25d366;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: transform 0.2s;
+  }
+  .btn-wa:hover { transform: scale(1.05); }
+  .btn-outline {
+    border: 2px solid var(--emas);
+    color: var(--emas);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { background: var(--emas); color: var(--hijau-tua); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0d2b1a;
+    color: #6ee7b7;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--emas); text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width: 640px) {
+    .nav-links { display: none; }
+    .hero-stats { gap: 1.5rem; }
+    .filter-section { padding: 1rem; }
+    .artikel-grid { grid-template-columns: 1fr; }
+    .modal-content { padding: 1.2rem; }
+  }
+
+  /* Scroll reveal */
+  .kartu { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s; }
+  .kartu.visible { opacity: 1; transform: translateY(0); }
+  .kartu:hover { transform: translateY(-6px) !important; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">🌿 Kayon <span>Herbal</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#panduan">Panduan Herbal</a></li>
+    <li><a href="index.html#toko">Toko</a></li>
+    <li><a href="artikel.html">📰 Artikel</a></li>
+    <li><a href="https://wa.me/62816268810" class="nav-wa">💬 Konsultasi</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">📰 Pusat Edukasi Kesehatan</div>
+  <h1>Artikel Kesehatan &<br><em>Tanaman Obat Jawa Timur</em></h1>
+  <p>Panduan lengkap berbasis kearifan lokal — dari dapur dan ladang Jawa Timur untuk keluarga sehat Indonesia</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>10</strong><span>Artikel Kesehatan</span></div>
+    <div class="hero-stat"><strong>10</strong><span>Tanaman Obat Jatim</span></div>
+    <div class="hero-stat"><strong>100%</strong><span>Gratis & Terpercaya</span></div>
+  </div>
+</section>
+
+<!-- FILTER -->
+<div class="filter-section">
+  <button class="tab-btn active" onclick="filter('semua')">🌿 Semua Artikel</button>
+  <button class="tab-btn" onclick="filter('kesehatan')">❤️ Kesehatan Umum</button>
+  <button class="tab-btn" onclick="filter('tanaman')">🌱 Tanaman Obat Jatim</button>
+</div>
+
+<!-- ========== ARTIKEL KESEHATAN ========== -->
+<main class="artikel-section">
+  <h2 class="section-title">❤️ Artikel <em>Kesehatan Umum</em></h2>
+  <p class="section-sub">10 panduan kesehatan praktis untuk kehidupan sehari-hari keluarga Indonesia</p>
+
+  <div class="artikel-grid" id="grid-kesehatan">
+
+    <!-- 1 -->
+    <div class="kartu" data-kategori="kesehatan" onclick="bukaModal('k1')">
+      <div class="kartu-emoji">🫀<span class="kartu-badge">Populer</span></div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Kesehatan Jantung</div>
+        <h3 class="kartu-judul">7 Kebiasaan Sehari-hari yang Menjaga Jantung Tetap Sehat</h3>
+        <p class="kartu-ringkasan">Penyakit jantung menjadi penyebab kematian nomor satu di Indonesia. Namun, banyak orang tidak tahu bahwa kebiasaan kecil sehari-hari bisa jadi penjaga terbaik jantung kita.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 5 menit baca</span>
+          <button class="btn-baca">Baca Artikel →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="kartu" data-kategori="kesehatan" onclick="bukaModal('k2')">
+      <div class="kartu-emoji">😴</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Kualitas Tidur</div>
+        <h3 class="kartu-judul">Tidur 6 Jam vs 8 Jam: Mana yang Lebih Baik untuk Kesehatan?</h3>
+        <p class="kartu-ringkasan">Banyak orang yang bangga bisa bekerja keras sampai larut malam. Tapi tahukah Anda, kekurangan tidur bisa memicu 5 penyakit serius yang sering diabaikan?</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 4 menit baca</span>
+          <button class="btn-baca">Baca Artikel →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="kartu" data-kategori="kesehatan" onclick="bukaModal('k3')">
+      <div class="kartu-emoji">🥗</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Nutrisi & Gizi</div>
+        <h3 class="kartu-judul">Panduan Makan Sehat Tanpa Diet Ketat untuk Orang Indonesia</h3>
+        <p class="kartu-ringkasan">Diet ketat sering kali tidak bertahan lama. Ketahui pola makan sehat yang sesuai dengan kebiasaan makan masyarakat Indonesia dan mudah dijalani setiap hari.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 6 menit baca</span>
+          <button class="btn-baca">Baca Artikel →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="kartu" data-kategori="kesehatan" onclick="bukaModal('k4')">
+      <div class="kartu-emoji">🧠</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Kesehatan Mental</div>
+        <h3 class="kartu-judul">Stres Kerja Merusak Kesehatan Fisik: Ini 6 Cara Mengatasinya</h3>
+        <p class="kartu-ringkasan">Stres bukan hanya masalah pikiran. Penelitian membuktikan stres kronis bisa menyebabkan tekanan darah tinggi, maag, hingga gangguan imun. Begini cara yang tepat untuk mengatasinya.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 5 menit baca</span>
+          <button class="btn-baca">Baca Artikel →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="kartu" data-kategori="kesehatan" onclick="bukaModal('k5')">
+      <div class="kartu-emoji">💧</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Hidrasi & Metabolisme</div>
+        <h3 class="kartu-judul">Kenapa Minum Air Putih 8 Gelas Sehari Itu Penting dan Ilmiahnya</h3>
+        <p class="kartu-ringkasan">Tubuh kita 60% terdiri dari air. Dehidrasi ringan saja sudah bisa menurunkan konsentrasi, memicu sakit kepala, dan memperlambat metabolisme. Ini penjelasan lengkapnya.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 4 menit baca</span>
+          <button class="btn-baca">Baca Artikel →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="kartu" data-kategori="kesehatan" onclick="bukaModal('k6')">
+      <div class="kartu-emoji">🏃</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Olahraga & Aktivitas</div>
+        <h3 class="kartu-judul">Olahraga 30 Menit Sehari: Jenis Mana yang Paling Efektif?</h3>
+        <p class="kartu-ringkasan">Tidak semua olahraga cocok untuk semua orang. Kenali 5 jenis olahraga yang bisa dilakukan di rumah tanpa peralatan dan manfaatnya untuk berbagai kondisi kesehatan.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 5 menit baca</span>
+          <button class="btn-baca">Baca Artikel →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="kartu" data-kategori="kesehatan" onclick="bukaModal('k7')">
+      <div class="kartu-emoji">🩸<span class="kartu-badge">Penting</span></div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Gula Darah & Diabetes</div>
+        <h3 class="kartu-judul">Prediabetes: Kenali Tanda-tandanya Sebelum Terlambat</h3>
+        <p class="kartu-ringkasan">Indonesia masuk 10 besar negara dengan penderita diabetes terbanyak di dunia. Sayangnya, banyak orang tidak sadar sudah berada di fase prediabetes selama bertahun-tahun.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 6 menit baca</span>
+          <button class="btn-baca">Baca Artikel →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="kartu" data-kategori="kesehatan" onclick="bukaModal('k8')">
+      <div class="kartu-emoji">🦷</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Kesehatan Mulut & Gigi</div>
+        <h3 class="kartu-judul">Kesehatan Gigi Ternyata Berkaitan dengan Kesehatan Jantung</h3>
+        <p class="kartu-ringkasan">Gigi berlubang yang diabaikan bisa menjadi pintu masuk bakteri ke aliran darah dan memengaruhi jantung. Ini hubungan yang jarang diketahui dan cara mencegahnya.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 4 menit baca</span>
+          <button class="btn-baca">Baca Artikel →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="kartu" data-kategori="kesehatan" onclick="bukaModal('k9')">
+      <div class="kartu-emoji">🌞</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Imunitas & Daya Tahan</div>
+        <h3 class="kartu-judul">5 Cara Alami Meningkatkan Imunitas Tubuh di Musim Hujan</h3>
+        <p class="kartu-ringkasan">Musim hujan identik dengan flu, batuk, dan demam. Tapi bukan berarti kita harus menyerah. Ada 5 cara alami yang terbukti efektif menjaga imunitas tubuh tanpa obat kimia.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 5 menit baca</span>
+          <button class="btn-baca">Baca Artikel →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="kartu" data-kategori="kesehatan" onclick="bukaModal('k10')">
+      <div class="kartu-emoji">🧘</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Gaya Hidup Sehat</div>
+        <h3 class="kartu-judul">Detoks Tubuh: Mitos dan Fakta yang Perlu Anda Ketahui</h3>
+        <p class="kartu-ringkasan">Produk detoks laris manis dijual di mana-mana. Tapi apakah tubuh kita benar-benar perlu detoks? Ini penjelasan ilmiah yang jujur dan cara detoks alami yang aman.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 5 menit baca</span>
+          <button class="btn-baca">Baca Artikel →</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /grid kesehatan -->
+
+  <!-- ========== TANAMAN OBAT ========== -->
+  <h2 class="section-title" style="margin-top:4rem">🌱 Tanaman Obat <em>Jawa Timur</em></h2>
+  <p class="section-sub">10 tanaman herbal yang tumbuh subur di Jawa Timur dan manfaatnya bagi kesehatan</p>
+
+  <div class="artikel-grid" id="grid-tanaman">
+
+    <!-- T1 -->
+    <div class="kartu" data-kategori="tanaman" onclick="bukaModal('t1')">
+      <div class="kartu-emoji tanaman">🌿<span class="kartu-badge">Khas Jatim</span></div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Tanaman Obat · Daun</div>
+        <h3 class="kartu-judul">Pegagan (Centella asiatica) — Si Daun Koin Penyembuh dari Jawa Timur</h3>
+        <p class="kartu-ringkasan">Pegagan tumbuh liar di ladang-ladang Malang dan Batu. Di balik tampilannya yang sederhana, daun kecil ini menyimpan manfaat luar biasa untuk otak, kulit, dan penyembuhan luka.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 5 menit baca</span>
+          <button class="btn-baca">Baca Selengkapnya →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- T2 -->
+    <div class="kartu" data-kategori="tanaman" onclick="bukaModal('t2')">
+      <div class="kartu-emoji tanaman">🪻</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Tanaman Obat · Bunga</div>
+        <h3 class="kartu-judul">Bunga Telang (Clitoria ternatea) — Herbal Biru dari Lereng Arjuno</h3>
+        <p class="kartu-ringkasan">Bunga biru cantik ini banyak tumbuh di pedesaan Jawa Timur. Selain jadi pewarna alami, bunga telang memiliki kandungan antioksidan yang bahkan lebih tinggi dari blueberry.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 4 menit baca</span>
+          <button class="btn-baca">Baca Selengkapnya →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- T3 -->
+    <div class="kartu" data-kategori="tanaman" onclick="bukaModal('t3')">
+      <div class="kartu-emoji tanaman">🌾</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Tanaman Obat · Rimpang</div>
+        <h3 class="kartu-judul">Temu Ireng (Curcuma aeruginosa) — Rimpang Hitam Pembasmi Cacingan</h3>
+        <p class="kartu-ringkasan">Temu ireng adalah tanaman asli Jawa Timur yang sudah digunakan selama berabad-abad. Di Kediri dan Nganjuk, ibu-ibu masih membuat jamu temu ireng untuk anak-anak mereka.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 5 menit baca</span>
+          <button class="btn-baca">Baca Selengkapnya →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- T4 -->
+    <div class="kartu" data-kategori="tanaman" onclick="bukaModal('t4')">
+      <div class="kartu-emoji tanaman">🍃</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Tanaman Obat · Daun</div>
+        <h3 class="kartu-judul">Daun Kemangi (Ocimum basilicum) — Lalapan Sehat Penuh Khasiat</h3>
+        <p class="kartu-ringkasan">Kemangi bukan sekadar penyedap pepes. Tanaman yang mudah dijumpai di pasar Sidoarjo dan Pasuruan ini mengandung eugenol, antibakteri alami yang ampuh untuk berbagai kondisi.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 4 menit baca</span>
+          <button class="btn-baca">Baca Selengkapnya →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- T5 -->
+    <div class="kartu" data-kategori="tanaman" onclick="bukaModal('t5')">
+      <div class="kartu-emoji tanaman">🌵<span class="kartu-badge">Populer</span></div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Tanaman Obat · Tanaman</div>
+        <h3 class="kartu-judul">Mahkota Dewa (Phaleria macrocarpa) — Raja Herbal dari Banyuwangi</h3>
+        <p class="kartu-ringkasan">Mahkota dewa banyak dibudidayakan di Banyuwangi dan Jember. Buahnya yang merah menyala menyimpan senyawa aktif yang terbukti membantu penyakit degeneratif dan kanker.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 6 menit baca</span>
+          <button class="btn-baca">Baca Selengkapnya →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- T6 -->
+    <div class="kartu" data-kategori="tanaman" onclick="bukaModal('t6')">
+      <div class="kartu-emoji tanaman">🌸</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Tanaman Obat · Bunga & Daun</div>
+        <h3 class="kartu-judul">Rosella (Hibiscus sabdariffa) — Bunga Cantik Anti-Hipertensi dari Malang</h3>
+        <p class="kartu-ringkasan">Sentra budidaya rosella terbesar di Jawa Timur ada di Malang Raya. Bunga merah segar ini sudah diteliti dan terbukti bisa menurunkan tekanan darah setara obat medis ringan.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 5 menit baca</span>
+          <button class="btn-baca">Baca Selengkapnya →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- T7 -->
+    <div class="kartu" data-kategori="tanaman" onclick="bukaModal('t7')">
+      <div class="kartu-emoji tanaman">🌿</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Tanaman Obat · Daun</div>
+        <h3 class="kartu-judul">Daun Insulin (Costus igneus) — Penurun Gula Darah dari Blitar</h3>
+        <p class="kartu-ringkasan">Di Blitar dan Tulungagung, tanaman daun insulin mulai banyak dibudidayakan. Namanya memang provokatif, tapi penelitian membuktikan tanaman ini memang membantu regulasi gula darah.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 5 menit baca</span>
+          <button class="btn-baca">Baca Selengkapnya →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- T8 -->
+    <div class="kartu" data-kategori="tanaman" onclick="bukaModal('t8')">
+      <div class="kartu-emoji tanaman">🍂</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Tanaman Obat · Kulit Kayu</div>
+        <h3 class="kartu-judul">Kayu Secang (Caesalpinia sappan) — Minuman Merah Khas Solo-Ponorogo</h3>
+        <p class="kartu-ringkasan">Wedang secang sudah menjadi minuman tradisional ikonik di Ponorogo dan Madiun. Warna merahnya bukan hanya cantik — senyawa brazilin di dalamnya bersifat anti-inflamasi dan antivirus.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 4 menit baca</span>
+          <button class="btn-baca">Baca Selengkapnya →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- T9 -->
+    <div class="kartu" data-kategori="tanaman" onclick="bukaModal('t9')">
+      <div class="kartu-emoji tanaman">🌱</div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Tanaman Obat · Akar & Daun</div>
+        <h3 class="kartu-judul">Alang-Alang (Imperata cylindrica) — Rumput Liar Bermanfaat di Mana-mana</h3>
+        <p class="kartu-ringkasan">Sering dianggap gulma, alang-alang justru merupakan tanaman obat berharga. Akarnya digunakan sebagai penurun panas alami dan obat infeksi saluran kemih di seluruh pedesaan Jawa Timur.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 4 menit baca</span>
+          <button class="btn-baca">Baca Selengkapnya →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- T10 -->
+    <div class="kartu" data-kategori="tanaman" onclick="bukaModal('t10')">
+      <div class="kartu-emoji tanaman">🫚<span class="kartu-badge">Langka</span></div>
+      <div class="kartu-body">
+        <div class="kartu-kategori">Tanaman Obat · Rimpang</div>
+        <h3 class="kartu-judul">Lempuyang (Zingiber zerumbet) — Rimpang Pahit Penumpas Penyakit Serius</h3>
+        <p class="kartu-ringkasan">Lempuyang wangi dan lempuyang emprit tumbuh subur di hutan-hutan Jawa Timur. Dalam pengobatan tradisional Jawa, rimpang ini disebut sebagai "obat seribu penyakit" dengan kandungan zerumbone yang kini diteliti secara intensif.</p>
+        <div class="kartu-footer">
+          <span class="kartu-meta">📖 6 menit baca</span>
+          <button class="btn-baca">Baca Selengkapnya →</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /grid tanaman -->
+</main>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>🌿 Ada Pertanyaan Seputar Herbal?</h2>
+  <p>Konsultasikan langsung dengan tim Kayon Gallery Herbal — gratis, tanpa syarat</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/62816268810?text=Halo%20Kayon%20Herbal%2C%20saya%20ingin%20konsultasi%20setelah%20membaca%20artikel" class="btn-wa">💬 Konsultasi via WhatsApp</a>
+    <a href="index.html#toko" class="btn-outline">🛒 Lihat Produk Herbal</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 <a href="index.html">Kayon Gallery Herbal</a> — Kediri, Jawa Timur | Dibuat dengan ❤ untuk keluarga Indonesia</p>
+</footer>
+
+<!-- ============================
+     MODAL ARTIKEL
+============================= -->
+<div class="modal-overlay" id="modalOverlay" onclick="tutupModalLuar(event)">
+  <div class="modal" id="modalKonten"></div>
+</div>
+
+<script>
+// ── DATA ARTIKEL ──
+const artikel = {
+
+  k1: {
+    emoji: '🫀', kategori: 'Kesehatan Jantung',
+    judul: '7 Kebiasaan Sehari-hari yang Menjaga Jantung Tetap Sehat',
+    konten: `
+      <p>Penyakit jantung koroner merupakan penyebab kematian nomor satu di Indonesia, bertanggung jawab atas lebih dari 35% total kematian setiap tahunnya menurut data Kemenkes RI. Namun kabar baiknya, sebagian besar risiko penyakit jantung bisa dicegah dengan mengubah kebiasaan sehari-hari.</p>
+      <h3>1. Berjalan Kaki 30 Menit Setiap Hari</h3>
+      <p>Berjalan kaki adalah olahraga kardio paling mudah dan murah. Studi dari Harvard School of Public Health membuktikan bahwa berjalan kaki 30 menit per hari menurunkan risiko penyakit jantung hingga 35%. Jantung adalah otot, dan seperti otot lainnya, ia butuh latihan rutin.</p>
+      <h3>2. Makan Lebih Banyak Serat</h3>
+      <p>Serat larut yang ditemukan di oatmeal, kacang-kacangan, dan buah-buahan membantu menurunkan kadar kolesterol LDL (kolesterol "jahat"). Targetkan 25-35 gram serat per hari dari sumber alami.</p>
+      <h3>3. Kendalikan Stres dengan Aktif</h3>
+      <p>Stres kronis memicu pelepasan hormon kortisol yang merusak dinding pembuluh darah. Teknik sederhana seperti pernapasan dalam, meditasi 10 menit, atau jalan-jalan di alam terbuka terbukti efektif menurunkan tekanan darah.</p>
+      <h3>4. Kurangi Garam (Bukan Hilangkan Sepenuhnya)</h3>
+      <p>Konsumsi natrium berlebih meningkatkan tekanan darah, yang merupakan faktor risiko utama penyakit jantung. WHO merekomendasikan maksimal 5 gram (1 sendok teh) garam per hari — termasuk yang ada di makanan olahan.</p>
+      <h3>5. Tidur Cukup 7-8 Jam</h3>
+      <p>Tidur kurang dari 6 jam per malam secara konsisten dikaitkan dengan peningkatan risiko serangan jantung sebesar 48% menurut studi European Heart Journal.</p>
+      <h3>6. Berhenti Merokok (atau Jauhi Asap Rokok)</h3>
+      <p>Nikotin dan karbon monoksida dalam rokok merusak lapisan dalam pembuluh darah dan meningkatkan risiko pembekuan darah. Dalam 1 tahun setelah berhenti merokok, risiko penyakit jantung turun 50%.</p>
+      <h3>7. Konsumsi Herbal Pendukung Jantung</h3>
+      <div class="highlight-box">💚 <strong>Herbal dari Dapur Anda:</strong> Bawang putih (menurunkan kolesterol & tekanan darah), kayu manis (mengontrol gula darah & trigliserida), dan jahe merah (anti-inflamasi pembuluh darah) adalah teman terbaik jantung Anda yang bisa didapat di pasar terdekat.</div>
+      <div class="warning-box">⚠️ Artikel ini bersifat edukatif. Penderita penyakit jantung wajib berkonsultasi dengan dokter spesialis jantung sebelum mengubah pola makan atau pengobatan.</div>
+    `
+  },
+
+  k2: {
+    emoji: '😴', kategori: 'Kualitas Tidur',
+    judul: 'Tidur 6 Jam vs 8 Jam: Mana yang Lebih Baik untuk Kesehatan?',
+    konten: `
+      <p>Di era modern yang serba cepat, banyak orang menganggap tidur sedikit adalah tanda kerja keras. Padahal, penelitian membuktikan bahwa ini adalah anggapan yang berbahaya dan bisa merusak kesehatan jangka panjang.</p>
+      <h3>Apa yang Terjadi Saat Kita Tidur?</h3>
+      <p>Tidur bukanlah sekadar istirahat pasif. Saat tidur, otak Anda aktif membersihkan zat-zat beracun (termasuk protein amyloid yang dikaitkan dengan Alzheimer), sistem imun memproduksi sel-sel pertahanan, dan tubuh memperbaiki jaringan yang rusak sepanjang hari.</p>
+      <h3>Efek Tidur 6 Jam secara Konsisten</h3>
+      <ul>
+        <li>Risiko diabetes tipe 2 meningkat 28%</li>
+        <li>Kemampuan konsentrasi setara orang mabuk ringan</li>
+        <li>Produksi kortisol (hormon stres) meningkat</li>
+        <li>Nafsu makan meningkat — hormon ghrelin naik, leptin turun</li>
+        <li>Sistem imun melemah hingga 70% (studi Carnegie Mellon)</li>
+      </ul>
+      <h3>Berapa Jam Tidur yang Ideal?</h3>
+      <div class="highlight-box">
+        🌙 <strong>Rekomendasi National Sleep Foundation:</strong><br>
+        Dewasa (18-64 tahun): <strong>7-9 jam</strong><br>
+        Lansia (65+): <strong>7-8 jam</strong><br>
+        Remaja (14-17 tahun): <strong>8-10 jam</strong>
+      </div>
+      <h3>Tips Meningkatkan Kualitas Tidur Secara Alami</h3>
+      <p>Waktu tidur yang konsisten lebih penting dari durasinya. Tidur dan bangun di jam yang sama setiap hari (termasuk akhir pekan) mengatur ritme sirkadian yang menjadi kunci kualitas tidur.</p>
+      <h3>Herbal untuk Tidur Lebih Berkualitas</h3>
+      <div class="highlight-box">💚 <strong>Rekomendasi herbal alami:</strong> Teh chamomile hangat 1 jam sebelum tidur, atau minuman jahe madu hangat (tanpa kafein) membantu merelaksasi sistem saraf dan meningkatkan kualitas tidur secara alami.</div>
+      <div class="warning-box">⚠️ Jika Anda rutin sulit tidur lebih dari 3 minggu, konsultasikan ke dokter — bisa jadi tanda insomnia kronis yang membutuhkan penanganan khusus.</div>
+    `
+  },
+
+  k3: {
+    emoji: '🥗', kategori: 'Nutrisi & Gizi',
+    judul: 'Panduan Makan Sehat Tanpa Diet Ketat untuk Orang Indonesia',
+    konten: `
+      <p>Diet ketat dan mahal sering kali tidak cocok dengan budaya makan Indonesia. Kabar baiknya, pola makan sehat yang berkelanjutan justru bisa dilakukan dengan bahan-bahan lokal yang mudah didapat dan terjangkau.</p>
+      <h3>Prinsip "Piring Sehat" ala Indonesia</h3>
+      <p>Kementerian Kesehatan RI merekomendasikan model "Isi Piringku" yang lebih kontekstual dari model Barat. Setengah piring berisi sayur dan buah, seperempat piring protein (ikan, tempe, tahu, ayam), dan seperempat piring karbohidrat (nasi, ubi, jagung).</p>
+      <h3>Makanan Lokal yang Sangat Bergizi</h3>
+      <ul>
+        <li><strong>Tempe:</strong> Protein tinggi, probiotik alami, fermentasi meningkatkan penyerapan nutrisi</li>
+        <li><strong>Ikan laut:</strong> Omega-3 tinggi, jauh lebih murah dari suplemen ikan</li>
+        <li><strong>Sayur bayam:</strong> Zat besi, folat, dan vitamin K yang sangat dibutuhkan tubuh</li>
+        <li><strong>Ubi jalar:</strong> Serat tinggi, indeks glikemik rendah, kaya beta-karoten</li>
+        <li><strong>Pepaya:</strong> Enzim papain untuk pencernaan, vitamin C lebih tinggi dari jeruk</li>
+      </ul>
+      <h3>Kebiasaan Makan yang Lebih Berpengaruh dari Menu</h3>
+      <p>Penelitian menunjukkan bahwa BAGAIMANA Anda makan sama pentingnya dengan APA yang Anda makan. Makan perlahan (minimal 20 menit per makan), tidak sambil menatap layar, dan berhenti sebelum kenyang (80% kenyang dalam prinsip Okinawa) terbukti mengurangi asupan kalori 20-30%.</p>
+      <div class="highlight-box">💚 <strong>Tips praktis:</strong> Tambahkan rempah-rempah (kunyit, jahe, kayu manis) ke masakan sehari-hari. Ini bukan hanya soal rasa — kandungan antioksidannya nyata dan terukur secara ilmiah.</div>
+      <div class="warning-box">⚠️ Hindari diet ekstrem yang mengeliminasi satu kelompok makanan sepenuhnya. Tubuh manusia membutuhkan semua makronutrien untuk berfungsi optimal.</div>
+    `
+  },
+
+  k4: {
+    emoji: '🧠', kategori: 'Kesehatan Mental',
+    judul: 'Stres Kerja Merusak Kesehatan Fisik: Ini 6 Cara Mengatasinya',
+    konten: `
+      <p>Koneksi antara pikiran dan tubuh lebih nyata dari yang kita kira. Stres kronis akibat pekerjaan bukan hanya "perasaan tidak nyaman" — ini respons fisiologis yang secara harfiah merusak organ tubuh kita jika dibiarkan.</p>
+      <h3>Bagaimana Stres Merusak Tubuh</h3>
+      <p>Saat stres, tubuh melepas hormon kortisol dan adrenalin dalam mode "fight or flight". Dalam jangka pendek, ini berguna. Tapi jika terus-menerus aktif, kortisol tinggi menyebabkan: tekanan darah meningkat, sistem imun melemah, gula darah tidak stabil, pencernaan terganggu, dan kerusakan pada hipokampus (pusat memori otak).</p>
+      <h3>6 Cara Mengatasi Stres Kerja yang Terbukti Efektif</h3>
+      <ul>
+        <li><strong>Teknik 4-7-8:</strong> Tarik napas 4 detik, tahan 7 detik, embuskan 8 detik. Lakukan 3x saat merasa tertekan</li>
+        <li><strong>Batasi notifikasi:</strong> Nonaktifkan notifikasi kerja di luar jam kerja — ini bukan malas, ini boundary sehat</li>
+        <li><strong>Gerak fisik 10 menit:</strong> Sekadar jalan kaki atau peregangan singkat memangkas kortisol 26%</li>
+        <li><strong>Journaling:</strong> Menulis 3 hal yang disyukuri setiap malam terbukti menurunkan level stres secara klinis</li>
+        <li><strong>Waktu hijau:</strong> 20 menit di taman atau area terbuka alami menurunkan kortisol lebih efektif dari liburan</li>
+        <li><strong>Koneksi sosial:</strong> Percakapan bermakna dengan orang yang dicintai melepas oksitosin, hormon penyembuh stres alami</li>
+      </ul>
+      <div class="highlight-box">💚 <strong>Herbal penenang alami:</strong> Teh jahe hangat dengan madu, atau minuman temulawak, mengandung senyawa yang membantu menurunkan kortisol dan meredakan kecemasan ringan secara alami.</div>
+      <div class="warning-box">⚠️ Jika stres sudah memengaruhi fungsi sehari-hari selama lebih dari 2 minggu, segera konsultasikan dengan psikolog atau psikiater. Mencari bantuan profesional adalah tanda kekuatan, bukan kelemahan.</div>
+    `
+  },
+
+  k5: {
+    emoji: '💧', kategori: 'Hidrasi & Metabolisme',
+    judul: 'Kenapa Minum Air Putih 8 Gelas Sehari Itu Penting dan Ilmiahnya',
+    konten: `
+      <p>Saran "minum 8 gelas air sehari" sudah sering kita dengar, tapi banyak yang belum tahu apa yang sebenarnya terjadi dalam tubuh saat kita cukup atau kurang minum air.</p>
+      <h3>Fungsi Air dalam Tubuh</h3>
+      <p>Air bukan sekadar pelepas dahaga. Air adalah media transportasi semua nutrisi ke sel, medium untuk semua reaksi kimia dalam tubuh, pengatur suhu inti tubuh, dan media pembuangan racun lewat ginjal. Otak kita sendiri terdiri dari 73% air.</p>
+      <h3>Tanda-tanda Dehidrasi yang Sering Diabaikan</h3>
+      <ul>
+        <li>Sakit kepala di sore hari tanpa sebab jelas</li>
+        <li>Konsentrasi menurun dan mudah lupa</li>
+        <li>Urin berwarna kuning gelap (idealnya kuning pucat)</li>
+        <li>Nafsu makan bertambah (otak sering bingung antara haus dan lapar)</li>
+        <li>Kulit kusam dan elastisitas menurun</li>
+      </ul>
+      <h3>Berapa Kebutuhan Air yang Sebenarnya?</h3>
+      <div class="highlight-box">
+        💧 <strong>Formula lebih akurat:</strong><br>
+        Berat badan (kg) × 30 ml = kebutuhan harian minimum<br>
+        Contoh: 60 kg × 30 ml = <strong>1.800 ml (sekitar 7-8 gelas)</strong><br>
+        Tambah 500ml untuk setiap jam aktivitas fisik intens atau cuaca panas.
+      </div>
+      <h3>Air Herbal sebagai Alternatif Menarik</h3>
+      <p>Jika sulit minum air putih biasa, infused water dengan irisan jahe, kayu manis, atau daun mint bisa menjadi alternatif yang menyehatkan sekaligus membuat minum air lebih menyenangkan.</p>
+      <div class="warning-box">⚠️ Minum terlalu banyak air sekaligus juga tidak baik (hiponatremia). Minumlah secara merata sepanjang hari, bukan langsung banyak dalam satu waktu.</div>
+    `
+  },
+
+  k6: {
+    emoji: '🏃', kategori: 'Olahraga & Aktivitas',
+    judul: 'Olahraga 30 Menit Sehari: Jenis Mana yang Paling Efektif?',
+    konten: `
+      <p>Rekomendasi WHO adalah 150 menit aktivitas fisik sedang per minggu, atau sekitar 30 menit per hari, 5 hari seminggu. Tapi bukan semua jenis olahraga memberikan manfaat yang sama untuk setiap orang.</p>
+      <h3>5 Jenis Olahraga yang Bisa Dilakukan Tanpa Gym</h3>
+      <ul>
+        <li><strong>Jalan cepat:</strong> Terbaik untuk pemula, lansia, dan yang kelebihan berat badan. Aman di sendi, efektif untuk jantung</li>
+        <li><strong>Berenang:</strong> Olahraga full-body terbaik, sangat cocok untuk penderita nyeri sendi dan asma</li>
+        <li><strong>Yoga/Pilates:</strong> Melatih keseimbangan, fleksibilitas, dan kesadaran napas — sangat efektif untuk stres</li>
+        <li><strong>Bersepeda:</strong> Cardio rendah dampak, memperkuat otot kaki, bisa sambil aktivitas sehari-hari</li>
+        <li><strong>HIIT ringan di rumah:</strong> High-Intensity Interval Training 20 menit setara 45 menit jogging biasa</li>
+      </ul>
+      <h3>Pilih Berdasarkan Tujuan Anda</h3>
+      <div class="highlight-box">
+        🎯 <strong>Penurunan berat badan:</strong> Kombinasi kardio + latihan kekuatan<br>
+        ❤️ <strong>Kesehatan jantung:</strong> Kardio sedang yang konsisten (jalan cepat, bersepeda)<br>
+        🧘 <strong>Kesehatan mental:</strong> Yoga, tai chi, atau jalan di alam terbuka<br>
+        💪 <strong>Kekuatan otot:</strong> Latihan beban ringan atau bodyweight exercise
+      </div>
+      <h3>Yang Lebih Penting dari Jenis Olahraganya</h3>
+      <p>Konsistensi adalah segalanya. Olahraga ringan yang dilakukan rutin 5x seminggu jauh lebih bermanfaat dari olahraga berat yang hanya dilakukan sekali seminggu atau saat sempat.</p>
+      <div class="warning-box">⚠️ Konsultasikan ke dokter sebelum memulai program olahraga jika Anda memiliki kondisi jantung, lutut, atau kondisi medis kronis lainnya.</div>
+    `
+  },
+
+  k7: {
+    emoji: '🩸', kategori: 'Gula Darah & Diabetes',
+    judul: 'Prediabetes: Kenali Tanda-tandanya Sebelum Terlambat',
+    konten: `
+      <p>Indonesia berada di peringkat ke-5 negara dengan jumlah penderita diabetes terbanyak di dunia (IDF Diabetes Atlas, 2021). Yang lebih mengkhawatirkan, diperkirakan separuh dari total penderita belum terdiagnosis — termasuk jutaan orang dalam kondisi prediabetes.</p>
+      <h3>Apa Itu Prediabetes?</h3>
+      <p>Prediabetes adalah kondisi di mana kadar gula darah sudah lebih tinggi dari normal, namun belum mencapai ambang batas diabetes. Ini adalah <em>zona kritis</em> — fase di mana kerusakan sudah mulai terjadi diam-diam pada pembuluh darah dan organ.</p>
+      <h3>8 Tanda Prediabetes yang Sering Diabaikan</h3>
+      <ul>
+        <li>Sering haus dan buang air kecil meski cuaca tidak panas</li>
+        <li>Mudah lapar meski baru makan</li>
+        <li>Kelelahan yang tidak proporsional dengan aktivitas</li>
+        <li>Pandangan kabur sesekali</li>
+        <li>Luka yang sembuhnya lebih lama dari biasanya</li>
+        <li>Kesemutan atau mati rasa di kaki dan tangan</li>
+        <li>Kulit gelap di ketiak atau lipatan leher (acanthosis nigricans)</li>
+        <li>Tekanan darah dan kolesterol cenderung tinggi</li>
+      </ul>
+      <h3>Langkah Membalik Prediabetes</h3>
+      <p>Kabar baiknya, prediabetes bisa dibalik sepenuhnya. Penelitian Diabetes Prevention Program membuktikan: penurunan berat badan 5-7% dan aktivitas fisik 150 menit/minggu menurunkan risiko berkembang menjadi diabetes sebesar 58%.</p>
+      <div class="highlight-box">💚 <strong>Herbal pendukung gula darah stabil:</strong> Kayu manis (0.5-2g per hari), daun salam rebus, dan temulawak memiliki senyawa aktif yang terbukti membantu sensitivitas insulin. Bisa dikonsumsi sebagai pelengkap, bukan pengganti pengobatan medis.</div>
+      <div class="warning-box">⚠️ Jika Anda memiliki faktor risiko (obesitas, riwayat keluarga diabetes, usia di atas 45), segera lakukan cek gula darah puasa. Deteksi dini adalah kunci pemulihan.</div>
+    `
+  },
+
+  k8: {
+    emoji: '🦷', kategori: 'Kesehatan Mulut & Gigi',
+    judul: 'Kesehatan Gigi Ternyata Berkaitan dengan Kesehatan Jantung',
+    konten: `
+      <p>Hubungan antara kesehatan mulut dan penyakit jantung bukan mitos. Lebih dari 50 penelitian telah mengonfirmasi kaitan ini, dan American Heart Association sudah menyebutnya sebagai faktor risiko yang perlu diperhatikan serius.</p>
+      <h3>Bagaimana Gigi Bisa Memengaruhi Jantung?</h3>
+      <p>Penyakit gusi (periodontitis) menyebabkan peradangan kronis di mulut. Bakteri dari gusi yang meradang dapat masuk ke aliran darah melalui jaringan gusi yang rusak, memicu peradangan pada pembuluh darah, dan meningkatkan risiko pembentukan plak arteri (aterosklerosis).</p>
+      <h3>Kondisi Lain yang Terkait dengan Kesehatan Mulut</h3>
+      <ul>
+        <li><strong>Diabetes:</strong> Gusi meradang memperburuk kontrol gula darah — dan diabetes memperburuk gusi (hubungan dua arah)</li>
+        <li><strong>Kehamilan:</strong> Penyakit gusi dikaitkan dengan kelahiran prematur dan berat badan lahir rendah</li>
+        <li><strong>Pneumonia:</strong> Bakteri mulut yang masuk ke paru-paru bisa memicu infeksi pernapasan</li>
+        <li><strong>Artritis Reumatoid:</strong> Bakteri periodontitis ditemukan dalam sendi yang meradang</li>
+      </ul>
+      <h3>Rutinitas Perawatan Mulut yang Benar</h3>
+      <div class="highlight-box">
+        🦷 <strong>Standar minimum perawatan mulut:</strong><br>
+        • Sikat gigi 2x sehari (pagi setelah sarapan, malam sebelum tidur)<br>
+        • Gunakan benang gigi (flossing) 1x sehari<br>
+        • Periksa ke dokter gigi minimal 6 bulan sekali<br>
+        • Hindari rokok — perokok berisiko 3x lebih tinggi terkena penyakit gusi
+      </div>
+      <h3>Herbal untuk Kesehatan Mulut</h3>
+      <p>Berkumur dengan air rebusan daun sirih (antibakteri alami) atau air garam hangat secara rutin membantu menjaga keseimbangan bakteri baik di mulut dan mengurangi peradangan gusi ringan.</p>
+      <div class="warning-box">⚠️ Jika gusi Anda berdarah saat menyikat gigi, atau ada gigi yang goyang tanpa sebab, segera konsultasikan ke dokter gigi — ini tanda periodontitis yang perlu penanganan segera.</div>
+    `
+  },
+
+  k9: {
+    emoji: '🌞', kategori: 'Imunitas & Daya Tahan',
+    judul: '5 Cara Alami Meningkatkan Imunitas Tubuh di Musim Hujan',
+    konten: `
+      <p>Musim hujan di Indonesia membawa peningkatan kasus flu, demam berdarah, dan infeksi saluran napas atas. Memahami cara kerja sistem imun dan cara alami memperkuatnya jauh lebih efektif daripada mengandalkan suplemen multivitamin saja.</p>
+      <h3>Bagaimana Sistem Imun Bekerja</h3>
+      <p>Sistem imun bukanlah satu organ tunggal — ini adalah jaringan kompleks yang melibatkan kulit, usus, kelenjar getah bening, dan miliaran sel darah putih. Sebesar 70% sistem imun kita berada di usus, itulah kenapa kesehatan pencernaan sangat memengaruhi daya tahan tubuh.</p>
+      <h3>5 Cara Alami yang Terbukti Efektif</h3>
+      <ul>
+        <li><strong>Tidur cukup dan berkualitas:</strong> Saat tidur, tubuh memproduksi sitokin — protein yang melawan infeksi dan peradangan. Kurang tidur 2 jam saja sudah menurunkan produksi sel NK (Natural Killer) hingga 70%</li>
+        <li><strong>Konsumsi probiotik alami:</strong> Tempe, oncom, yoghurt, dan acar sayuran mengandung bakteri baik yang memperkuat lapisan pelindung usus</li>
+        <li><strong>Vitamin D dari sinar matahari:</strong> 15-20 menit di bawah sinar matahari pagi (sebelum jam 10.00) cukup untuk produksi vitamin D harian yang mengaktifkan sel T pejuang infeksi</li>
+        <li><strong>Manajemen stres aktif:</strong> Stres kronis menekan produksi limfosit. Meditasi, olahraga ringan, dan waktu sosial berkualitas adalah "suplemen imun" gratis</li>
+        <li><strong>Konsumsi rempah anti-inflamasi:</strong> Jahe, kunyit, bawang putih, dan cengkeh mengandung senyawa imunomodulator yang mengoptimalkan respons imun</li>
+      </ul>
+      <div class="highlight-box">💚 <strong>Jamu Imun Kayon:</strong> Rebus 2 ruas jahe + 1 ruas kunyit + 2 siung bawang putih dalam 500ml air selama 15 menit. Tambah madu dan perasan jeruk nipis. Minum 1 gelas pagi hari — ini "vaksin harian" dari dapur Anda.</div>
+      <div class="warning-box">⚠️ Suplemen imun tidak menggantikan vaksinasi. Pastikan jadwal imunisasi Anda dan keluarga selalu up-to-date, terutama vaksin influenza tahunan.</div>
+    `
+  },
+
+  k10: {
+    emoji: '🧘', kategori: 'Gaya Hidup Sehat',
+    judul: 'Detoks Tubuh: Mitos dan Fakta yang Perlu Anda Ketahui',
+    konten: `
+      <p>Industri detoks adalah bisnis miliaran dolar yang menjual produk dengan klaim besar namun sering kali tanpa bukti ilmiah yang solid. Sebelum Anda membeli produk detoks mahal, kenali dulu faktanya.</p>
+      <h3>Apakah Tubuh Perlu "Detoks"?</h3>
+      <p>Secara ilmiah, tubuh manusia sudah dilengkapi sistem detoks yang luar biasa canggih: hati (liver) menetralisir zat beracun, ginjal menyaring darah 200 liter per hari, paru-paru mengeluarkan gas sisa metabolisme, dan kulit membuang racun melalui keringat. Anda tidak perlu membeli jus seharga ratusan ribu untuk "membersihkan" sistem yang sudah bekerja 24 jam ini.</p>
+      <h3>Yang Benar-benar Membantu Sistem Detoks Alami Tubuh</h3>
+      <ul>
+        <li><strong>Air putih yang cukup:</strong> Membantu ginjal menyaring dan membuang limbah lebih efisien</li>
+        <li><strong>Tidur berkualitas:</strong> Sistem glimfatik otak aktif membersihkan racun saraf hanya saat tidur nyenyak</li>
+        <li><strong>Sayuran cruciferous:</strong> Brokoli, kubis, dan kembang kol mengandung sulforaphane yang meningkatkan enzim detoks di hati</li>
+        <li><strong>Berolahraga:</strong> Meningkatkan sirkulasi limfa yang membuang sel-sel imun tua dan produk sampingan metabolisme</li>
+        <li><strong>Kurangi alkohol dan rokok:</strong> Ini adalah "racun" yang paling nyata dan paling merusak sistem detoks alami</li>
+      </ul>
+      <h3>Detoks Herbal yang Aman dan Masuk Akal</h3>
+      <div class="highlight-box">💚 <strong>Detoks alami yang terbukti:</strong> Temulawak mengandung curcumin yang melindungi sel hati. Daun sambiloto membantu fungsi hati dan empedu. Lidah buaya (konsumsi gel, bukan lateks) membantu pergerakan usus. Ini bukan "detoks ajaib", tapi dukungan nyata untuk organ yang sudah bekerja keras.</div>
+      <div class="warning-box">⚠️ Hindari produk detoks yang menjanjikan penurunan berat badan drastis, "membersihkan kolon" secara agresif, atau mengklaim bisa menyembuhkan penyakit tertentu. Ini tanda produk tidak kredibel yang bahkan bisa berbahaya.</div>
+    `
+  },
+
+  // ──────────────────────────────────────
+  // TANAMAN OBAT
+  // ──────────────────────────────────────
+
+  t1: {
+    emoji: '🌿', kategori: 'Tanaman Obat Jawa Timur · Pegagan',
+    judul: 'Pegagan (Centella asiatica) — Si Daun Koin Penyembuh dari Jawa Timur',
+    konten: `
+      <p>Pegagan atau daun koin (<em>Centella asiatica</em>) adalah tanaman merambat kecil yang tumbuh liar di ladang, pinggir jalan, dan area lembab di seluruh Jawa Timur — terutama di dataran tinggi Malang, Batu, dan lereng Bromo-Tengger.</p>
+      <h3>Kandungan Aktif yang Luar Biasa</h3>
+      <p>Pegagan mengandung triterpenoid (asiatikosida, madekasosida), flavonoid, dan polifenol. Asiatikosida adalah senyawa yang kini sedang intensif diteliti karena kemampuannya merangsang produksi kolagen dan memperbaiki jaringan saraf.</p>
+      <h3>Manfaat yang Terbukti Secara Ilmiah</h3>
+      <ul>
+        <li><strong>Meningkatkan fungsi kognitif:</strong> Riset di Universitas Brawijaya (Malang) membuktikan ekstrak pegagan meningkatkan memori dan konsentrasi pada lansia</li>
+        <li><strong>Mempercepat penyembuhan luka:</strong> Asiatikosida merangsang sintesis kolagen dan fibroblas — sudah digunakan dalam produk farmasi modern</li>
+        <li><strong>Mengurangi kecemasan:</strong> Efek ansiolotik (penurun kecemasan) tanpa efek mengantuk seperti obat kimia</li>
+        <li><strong>Melancarkan sirkulasi darah:</strong> Membantu mengatasi varises dan kaki bengkak</li>
+        <li><strong>Anti-inflamasi pada kulit:</strong> Digunakan untuk psoriasis, eksim, dan bekas luka keloid</li>
+      </ul>
+      <h3>Cara Penggunaan Tradisional di Jawa Timur</h3>
+      <div class="highlight-box">
+        🌿 <strong>Jus Pegagan Segar:</strong><br>
+        Ambil 30-50 lembar daun pegagan segar, cuci bersih.<br>
+        Blender dengan 200ml air matang dan sedikit madu.<br>
+        Minum 1 gelas setiap pagi selama 4 minggu untuk efek kognitif.
+      </div>
+      <h3>Cara Menemukan di Jawa Timur</h3>
+      <p>Pegagan mudah ditemukan tumbuh liar di area lembab, pinggir sawah, dan taman-taman di Malang dan Batu. Juga tersedia di pasar tradisional Kediri dalam bentuk segar sebagai sayuran lalapan.</p>
+      <div class="warning-box">⚠️ Tidak dianjurkan untuk ibu hamil dan menyusui. Konsumsi berlebihan (lebih dari 3 bulan tanpa jeda) bisa membebani hati. Lakukan jeda konsumsi 1 minggu setiap bulan.</div>
+    `
+  },
+
+  t2: {
+    emoji: '🪻', kategori: 'Tanaman Obat Jawa Timur · Bunga Telang',
+    judul: 'Bunga Telang (Clitoria ternatea) — Herbal Biru dari Lereng Arjuno',
+    konten: `
+      <p>Bunga telang (<em>Clitoria ternatea</em>) adalah tanaman merambat dengan bunga biru-ungu cerah yang banyak tumbuh di pekarangan dan lereng-lereng pegunungan Jawa Timur, khususnya di kawasan Arjuno-Welirang dan Lawu.</p>
+      <h3>Pigmen Biru yang Menyimpan Keajaiban</h3>
+      <p>Warna biru bunga telang berasal dari anthocyanin, khususnya ternatins dan proanthocyanidins. Kandungan anthocyanin bunga telang bahkan lebih tinggi dari blueberry yang selama ini diagung-agungkan sebagai superfood antioksidan.</p>
+      <h3>Manfaat yang Mulai Diteliti Intensif</h3>
+      <ul>
+        <li><strong>Antioksidan kuat:</strong> Anthocyanin melindungi sel dari kerusakan oksidatif dan memperlambat proses penuaan sel</li>
+        <li><strong>Mendukung kesehatan mata:</strong> Meningkatkan produksi rhodopsin (pigmen penglihatan malam) — sudah digunakan dalam suplemen mata di Jepang</li>
+        <li><strong>Anti-glikemik:</strong> Menghambat enzim alpha-glukosidase, memperlambat penyerapan gula — potensial untuk penderita diabetes</li>
+        <li><strong>Anti-stres dan meningkatkan memori:</strong> Beberapa studi menunjukkan efek nootropik (peningkat fungsi otak)</li>
+        <li><strong>Anti-inflamasi:</strong> Mengurangi peradangan pada saluran pencernaan</li>
+      </ul>
+      <h3>Cara Membuat Teh Bunga Telang</h3>
+      <div class="highlight-box">
+        🪻 <strong>Teh Bunga Telang Klasik:</strong><br>
+        5-7 bunga telang kering + air panas 200ml.<br>
+        Seduh 5 menit hingga air berubah biru pekat.<br>
+        Tambah perasan jeruk nipis — warna akan berubah ungu (reaksi antosianin dengan asam).<br>
+        Tambah madu secukupnya. Nikmati 1-2x sehari.
+      </div>
+      <h3>Budidaya di Jawa Timur</h3>
+      <p>Bunga telang sangat mudah dibudidayakan — cukup tanam di pot dengan merambat ke pagar atau teralis. Berbunga sepanjang tahun di iklim Jawa Timur dan tidak memerlukan perawatan intensif.</p>
+      <div class="warning-box">⚠️ Hindari konsumsi berlebihan saat kehamilan. Meskipun aman dalam jumlah normal, belum ada studi memadai tentang keamanannya untuk ibu hamil dalam dosis tinggi.</div>
+    `
+  },
+
+  t3: {
+    emoji: '🌾', kategori: 'Tanaman Obat Jawa Timur · Temu Ireng',
+    judul: 'Temu Ireng (Curcuma aeruginosa) — Rimpang Hitam Pembasmi Cacingan',
+    konten: `
+      <p>Temu ireng (<em>Curcuma aeruginosa</em>) adalah kerabat kunyit dengan rimpang berwarna abu-kehitaman yang khas. Tanaman ini sudah lama digunakan dalam pengobatan tradisional Jawa, terutama di Kediri, Nganjuk, dan Madiun sebagai jamu anak-anak.</p>
+      <h3>Mengapa Dinamakan "Ireng" (Hitam)?</h3>
+      <p>Berbeda dari kunyit yang rimpangnya kuning cerah, temu ireng memiliki rimpang dalam berwarna ungu keabu-abuan hingga hitam kebiruan. Kandungan antrakuinon dan kurkuminoid-nya lebih tinggi dari kunyit biasa, memberikan warna dan sifat yang berbeda.</p>
+      <h3>Manfaat Utama Temu Ireng</h3>
+      <ul>
+        <li><strong>Antelmintik (pembasmi cacing):</strong> Senyawa germakron dalam temu ireng terbukti efektif melawan berbagai jenis parasit cacing usus, terutama Ascaris dan Oxyuris</li>
+        <li><strong>Meningkatkan nafsu makan:</strong> Stimulasi produksi empedu dan enzim pencernaan — ideal untuk anak kurus dan kurang nafsu makan</li>
+        <li><strong>Anti-inflamasi kuat:</strong> Kandungan kurkuminoid tinggi memberikan efek anti-peradangan sistemik</li>
+        <li><strong>Meredakan batuk dan sesak napas:</strong> Digunakan sebagai ekspektoran (pengencer dahak) dalam pengobatan tradisional</li>
+        <li><strong>Mendukung kesehatan hati:</strong> Bersifat hepatoprotektif, melindungi sel-sel hati dari kerusakan</li>
+      </ul>
+      <h3>Jamu Temu Ireng Tradisional Jawa Timur</h3>
+      <div class="highlight-box">
+        🌾 <strong>Jamu Temu Ireng untuk Anak:</strong><br>
+        2 ruas temu ireng + 1 ruas kencur + 1 sdm gula jawa.<br>
+        Parut, peras, campurkan dengan 100ml air matang.<br>
+        Untuk anak di atas 5 tahun: 2 sendok makan, 2x seminggu.<br>
+        ⚠️ Konsultasikan dosis untuk anak di bawah 5 tahun.
+      </div>
+      <h3>Cara Mendapatkan di Jawa Timur</h3>
+      <p>Temu ireng tersedia di pasar-pasar tradisional besar Jawa Timur seperti Pasar Gede Kediri, Pasar Besar Nganjuk, dan Pasar Besar Madiun. Bisa dibeli dalam bentuk segar atau sudah dikeringkan sebagai simplisia.</p>
+      <div class="warning-box">⚠️ Tidak dianjurkan untuk ibu hamil, terutama trimester pertama. Jangan konsumsi bersamaan dengan obat pengencer darah.</div>
+    `
+  },
+
+  t4: {
+    emoji: '🍃', kategori: 'Tanaman Obat Jawa Timur · Kemangi',
+    judul: 'Daun Kemangi (Ocimum basilicum) — Lalapan Sehat Penuh Khasiat',
+    konten: `
+      <p>Kemangi (<em>Ocimum basilicum</em> var. <em>citratum</em>) adalah tanaman aromatik yang tak bisa dipisahkan dari budaya makan Jawa Timur. Hampir setiap warung pecel di Kediri, Blitar, dan Tulungagung menyajikan kemangi segar sebagai lalapan wajib.</p>
+      <h3>Kandungan yang Membuat Kemangi Spesial</h3>
+      <p>Aroma khas kemangi berasal dari eugenol, linalool, dan sitral — senyawa volatil yang juga bersifat antibakteri dan antijamur. Selain itu, kemangi mengandung flavonoid (apigenin, luteolin), vitamin K, magnesium, dan zat besi dalam jumlah cukup signifikan.</p>
+      <h3>Manfaat Kesehatan Kemangi</h3>
+      <ul>
+        <li><strong>Antibakteri alami:</strong> Eugenol menghambat pertumbuhan bakteri <em>E. coli</em>, <em>Staphylococcus aureus</em>, dan <em>Salmonella</em></li>
+        <li><strong>Anti-inflamasi:</strong> Apigenin dan luteolin menghambat jalur inflamasi COX-2</li>
+        <li><strong>Menurunkan gula darah:</strong> Ekstrak kemangi membantu sensitivitas insulin (studi pada hewan coba)</li>
+        <li><strong>Kesehatan tulang:</strong> Vitamin K yang tinggi penting untuk metabolisme kalsium dan kepadatan tulang</li>
+        <li><strong>Meredakan stres (adaptogen ringan):</strong> Linalool memiliki efek menenangkan sistem saraf</li>
+        <li><strong>Mengurangi bau badan:</strong> Dikonsumsi rutin membantu menekan bakteri penyebab bau badan dari dalam</li>
+      </ul>
+      <h3>Cara Konsumsi Optimal</h3>
+      <div class="highlight-box">
+        🍃 <strong>Cara terbaik mengonsumsi kemangi:</strong><br>
+        Makan segar sebagai lalapan 1-2 genggam per hari.<br>
+        Hindari memasak berlebihan — panas tinggi merusak eugenol dan vitamin.<br>
+        Teh kemangi: seduh 10 lembar daun segar dalam air panas 5 menit, tambah madu.
+      </div>
+      <h3>Kemangi di Dapur Jawa Timur</h3>
+      <p>Selain lalapan, kemangi digunakan dalam pepes ikan, bothok, dan berbagai masakan Jawa Timur lainnya. Di Surabaya, kemangi bahkan digunakan dalam beberapa varian rawon dan lontong balap.</p>
+      <div class="warning-box">⚠️ Konsumsi berlebihan kemangi (lebih dari 500g per hari dalam jangka panjang) bisa memengaruhi kesuburan. Untuk konsumsi kuliner normal, sangat aman untuk semua kalangan.</div>
+    `
+  },
+
+  t5: {
+    emoji: '🌵', kategori: 'Tanaman Obat Jawa Timur · Mahkota Dewa',
+    judul: 'Mahkota Dewa (Phaleria macrocarpa) — Raja Herbal dari Banyuwangi',
+    konten: `
+      <p>Mahkota dewa (<em>Phaleria macrocarpa</em>) adalah tanaman asli Papua yang kini banyak dibudidayakan di Jawa Timur, terutama di Banyuwangi, Jember, dan Lumajang. Buahnya yang merah menyala seperti apel mini menjadikannya mudah dikenali.</p>
+      <h3>Mengapa Disebut "Raja Herbal"?</h3>
+      <p>Mahkota dewa mengandung spektrum fitokimia yang sangat kaya: alkaloid, saponin, flavonoid, polifenol, dan lignan. Kombinasi ini memberikannya reputasi sebagai tanaman multi-manfaat dalam pengobatan tradisional Jawa Timur.</p>
+      <h3>Manfaat yang Diteliti</h3>
+      <ul>
+        <li><strong>Antioksidan kuat:</strong> Flavonoid dan polifenol melindungi sel dari kerusakan radikal bebas</li>
+        <li><strong>Anti-kanker (penelitian awal):</strong> Senyawa lignan menunjukkan aktivitas sitotoksik terhadap sel kanker in vitro — sedang diteliti intensif</li>
+        <li><strong>Antidiabetes:</strong> Membantu penurunan kadar gula darah dengan menghambat enzim alpha-glukosidase</li>
+        <li><strong>Anti-inflamasi:</strong> Efektif untuk asam urat, rematik, dan peradangan sendi</li>
+        <li><strong>Antihipertensi:</strong> Membantu menurunkan tekanan darah melalui mekanisme vasodilatasi</li>
+      </ul>
+      <h3>Cara Penggunaan yang Aman</h3>
+      <div class="highlight-box">
+        🌵 <strong>Teh Mahkota Dewa:</strong><br>
+        Ambil 5 buah mahkota dewa, keluarkan bijinya (BIJI BERACUN!).<br>
+        Keringkan daging buah dan kulit, iris tipis.<br>
+        Rebus 5-10 irisan dalam 500ml air selama 15 menit.<br>
+        Saring, minum 1 gelas per hari. Mulai dengan dosis kecil dulu.
+      </div>
+      <h3>Peringatan Penting</h3>
+      <div class="warning-box">⚠️ <strong>PENTING:</strong> Biji mahkota dewa BERACUN dan tidak boleh dikonsumsi. Daun segar dalam jumlah besar juga bisa menyebabkan mual. Mulailah dengan dosis kecil dan tingkatkan bertahap. Tidak untuk ibu hamil, menyusui, dan anak-anak. Konsultasikan dengan herbalis atau dokter sebelum penggunaan reguler.</div>
+    `
+  },
+
+  t6: {
+    emoji: '🌸', kategori: 'Tanaman Obat Jawa Timur · Rosella',
+    judul: 'Rosella (Hibiscus sabdariffa) — Bunga Cantik Anti-Hipertensi dari Malang',
+    konten: `
+      <p>Rosella (<em>Hibiscus sabdariffa</em>) adalah tanaman semak dengan kelopak bunga merah cerah yang menjadi salah satu komoditas agrowisata unggulan di Malang Raya. Sentra budidaya rosella terbesar di Jawa Timur berada di Kecamatan Pujon dan Ngantang, Malang.</p>
+      <h3>Profil Gizi dan Fitokimia Rosella</h3>
+      <p>Kelopak bunga rosella kering mengandung anthocyanin (delphinidin, cyanidin), asam hibiskin, asam askorbat (vitamin C), kalsium, dan berbagai asam organik. Kandungan vitamin C rosella segar bahkan lebih tinggi dari jeruk.</p>
+      <h3>Manfaat yang Sudah Terbukti Klinis</h3>
+      <ul>
+        <li><strong>Menurunkan tekanan darah:</strong> Meta-analisis dari 5 randomized controlled trial membuktikan rosella menurunkan tekanan darah sistolik rata-rata 7.58 mmHg — sebanding dengan obat antihipertensi dosis rendah</li>
+        <li><strong>Antioksidan tinggi:</strong> ORAC (Oxygen Radical Absorbance Capacity) rosella kering 2x lebih tinggi dari acai berry</li>
+        <li><strong>Menurunkan kolesterol LDL:</strong> Asam hibiskin menghambat sintesis kolesterol di hati</li>
+        <li><strong>Anti-inflamasi:</strong> Menghambat enzim COX-1 dan COX-2, serupa mekanisme obat anti-inflamasi nonsteroid</li>
+        <li><strong>Antibakteri:</strong> Efektif melawan <em>E. coli</em> dan <em>Staphylococcus aureus</em> dalam uji laboratorium</li>
+      </ul>
+      <h3>Cara Membuat Teh Rosella</h3>
+      <div class="highlight-box">
+        🌸 <strong>Teh Rosella Malang:</strong><br>
+        5-8 kelopak bunga rosella kering (atau 10-15 segar).<br>
+        Seduh dalam 300ml air panas selama 5-7 menit.<br>
+        Warna merah segar akan keluar. Tambah madu atau gula aren.<br>
+        Bisa juga diminum dingin. 1-2 gelas per hari untuk manfaat optimal.
+      </div>
+      <h3>Membeli Rosella di Jawa Timur</h3>
+      <p>Bunga rosella segar dan kering tersedia di pasar-pasar Malang (Pasar Besar, Pasar Blimbing), serta berbagai toko herbal di seluruh Jawa Timur. Harga sangat terjangkau dibanding suplemen impor dengan klaim serupa.</p>
+      <div class="warning-box">⚠️ Penderita hipertensi yang sudah mengonsumsi obat antihipertensi harus hati-hati — efek kombinasi bisa menurunkan tekanan darah terlalu rendah. Konsultasikan dengan dokter sebelum konsumsi rutin.</div>
+    `
+  },
+
+  t7: {
+    emoji: '🌿', kategori: 'Tanaman Obat Jawa Timur · Daun Insulin',
+    judul: 'Daun Insulin (Costus igneus) — Penurun Gula Darah dari Blitar',
+    konten: `
+      <p>Daun insulin atau daun yakon (<em>Costus igneus</em>) adalah tanaman hias tropis yang kini semakin banyak dikenal sebagai tanaman obat antidiabetes. Di Blitar dan Tulungagung, budidaya tanaman ini mulai berkembang seiring tingginya angka diabetes di masyarakat.</p>
+      <h3>Mengapa Dinamakan "Daun Insulin"?</h3>
+      <p>Nama ini berasal dari laporan dari India (negara asalnya) yang menggambarkan kemampuan tanaman ini menurunkan gula darah. Namanya memang provokatif dan sering disalahpahami — tanaman ini tidak mengandung insulin, tapi mengandung senyawa yang memodulasi metabolisme glukosa.</p>
+      <h3>Kandungan Aktif dan Mekanisme Kerja</h3>
+      <ul>
+        <li><strong>Triterpenoid:</strong> Menghambat enzim alpha-glukosidase, memperlambat penyerapan gula dari usus</li>
+        <li><strong>Flavonoid:</strong> Bersifat antioksidan dan membantu sensitivitas reseptor insulin</li>
+        <li><strong>Diosgenin (saponin steroid):</strong> Membantu regulasi metabolisme lipid dan gula</li>
+      </ul>
+      <h3>Bukti Ilmiah dan Keterbatasannya</h3>
+      <p>Studi in vivo (pada hewan) menunjukkan penurunan kadar gula darah yang signifikan. Namun, studi klinis pada manusia masih sangat terbatas. Ini bukan berarti tidak efektif — tapi harus diposisikan sebagai pelengkap terapi medis, bukan pengganti.</p>
+      <h3>Cara Konsumsi di Blitar</h3>
+      <div class="highlight-box">
+        🌿 <strong>Cara tradisional yang umum di Blitar:</strong><br>
+        2-3 lembar daun insulin segar, cuci bersih.<br>
+        Kunyah langsung (pahit sedikit) atau blender dengan air.<br>
+        Atau rebus 3 lembar dalam 2 gelas air hingga tersisa 1 gelas.<br>
+        Minum 30 menit sebelum makan. 1x sehari, pantau kadar gula darah rutin.
+      </div>
+      <div class="warning-box">⚠️ <strong>Penting untuk penderita diabetes:</strong> Pemantauan gula darah rutin wajib dilakukan. Jangan kurangi dosis obat antidiabetik tanpa izin dokter. Efek penurunan gula darah bisa aditif dengan obat, berisiko hipoglikemia.</div>
+    `
+  },
+
+  t8: {
+    emoji: '🍂', kategori: 'Tanaman Obat Jawa Timur · Secang',
+    judul: 'Kayu Secang (Caesalpinia sappan) — Minuman Merah Khas Ponorogo-Madiun',
+    konten: `
+      <p>Kayu secang (<em>Caesalpinia sappan</em>) adalah pohon kecil yang kulit kayunya menghasilkan warna merah alami yang khas. Wedang secang sudah menjadi minuman tradisional ikonik di Ponorogo, Madiun, Magetan, dan berbagai daerah di Jawa Timur bagian barat.</p>
+      <h3>Senyawa Brazilin: Si Merah yang Berkhasiat</h3>
+      <p>Warna merah kayu secang berasal dari brazilin, senyawa yang ketika teroksidasi menjadi brazilein. Brazilin dan brazilein inilah yang menjadi bintang dari khasiat farmakologis kayu secang — dan keduanya sedang aktif diteliti di berbagai universitas Indonesia.</p>
+      <h3>Manfaat yang Diteliti</h3>
+      <ul>
+        <li><strong>Anti-inflamasi kuat:</strong> Brazilin menghambat NF-κB, jalur utama inflamasi dalam tubuh — sebanding dengan beberapa obat anti-inflamasi</li>
+        <li><strong>Antivirus:</strong> Menunjukkan aktivitas melawan beberapa virus, termasuk studi terhadap SARS-CoV-2 (penelitian awal)</li>
+        <li><strong>Antibakteri:</strong> Efektif terhadap <em>Staphylococcus aureus</em> dan <em>Mycobacterium tuberculosis</em> dalam kondisi laboratorium</li>
+        <li><strong>Antioksidan:</strong> Skor DPPH (pengukur aktivitas antioksidan) sangat tinggi</li>
+        <li><strong>Antikanker (penelitian awal):</strong> Brazilein menunjukkan aktivitas antiproliferatif pada beberapa lini sel kanker</li>
+      </ul>
+      <h3>Wedang Secang Ponorogo</h3>
+      <div class="highlight-box">
+        🍂 <strong>Resep Wedang Secang Tradisional:</strong><br>
+        1-2 batang kayu secang (5-7 cm) + 2 ruas jahe geprek.<br>
+        2 batang serai + 1 batang kayu manis + 3 cengkeh.<br>
+        Rebus dalam 600ml air hingga berwarna merah pekat (15 menit).<br>
+        Saring, tambahkan gula batu atau gula aren. Sajikan hangat.
+      </div>
+      <h3>Membeli di Jawa Timur</h3>
+      <p>Kayu secang tersedia dalam bentuk serutan di pasar-pasar tradisional seluruh Jawa Timur dengan harga sangat terjangkau. Di Ponorogo, ada beberapa penjual wedang secang keliling yang menggunakan gerobak tradisional.</p>
+      <div class="warning-box">⚠️ Konsumsi secukupnya. Tidak dianjurkan untuk ibu hamil dalam jumlah besar. Warna merah pada urin setelah konsumsi adalah hal normal dan tidak berbahaya.</div>
+    `
+  },
+
+  t9: {
+    emoji: '🌱', kategori: 'Tanaman Obat Jawa Timur · Alang-Alang',
+    judul: 'Alang-Alang (Imperata cylindrica) — Rumput Liar Bermanfaat di Mana-mana',
+    konten: `
+      <p>Alang-alang (<em>Imperata cylindrica</em>) sering dipandang sebagai gulma pengganggu yang sulit dibasmi. Namun dalam khasanah pengobatan tradisional Jawa Timur, akar alang-alang justru adalah obat serbaguna yang mudah didapat secara gratis di hampir seluruh wilayah.</p>
+      <h3>Bagian yang Digunakan dan Kandungannya</h3>
+      <p>Bagian utama yang digunakan adalah akar (rimpang) alang-alang yang mengandung arundoin, silindrin, fernenol, isoarborinol, simiarenol, kuersetin, dan kalium oksalat. Akarnya berwarna putih bersih dan memiliki rasa manis ringan.</p>
+      <h3>Manfaat Tradisional yang Terbukti</h3>
+      <ul>
+        <li><strong>Diuretik alami:</strong> Meningkatkan produksi urin, membantu mengeluarkan racun dan kristal asam urat melalui ginjal</li>
+        <li><strong>Anti-infeksi saluran kemih:</strong> Antibakteri ringan yang membantu mengatasi ISK (Infeksi Saluran Kemih)</li>
+        <li><strong>Menurunkan panas/demam:</strong> Efek antipiretik yang digunakan secara luas sebelum era obat penurun panas modern</li>
+        <li><strong>Menghentikan pendarahan ringan:</strong> Efek hemostatik pada pendarahan hidung dan urin berdarah</li>
+        <li><strong>Meredakan panas dalam:</strong> Sensasi pendingin pada tenggorokan dan sistem pencernaan</li>
+      </ul>
+      <h3>Minuman Akar Alang-Alang</h3>
+      <div class="highlight-box">
+        🌱 <strong>Cara membuat:</strong><br>
+        Ambil akar alang-alang segar 50-100 gram (cuci sangat bersih).<br>
+        Rebus dalam 600ml air bersama 3 ruas jahe selama 20 menit.<br>
+        Saring, tambah gula batu atau madu.<br>
+        Minum 2x sehari untuk ISK atau demam ringan.
+      </div>
+      <h3>Cara Mendapatkan</h3>
+      <p>Alang-alang dapat ditemukan hampir di seluruh Jawa Timur — pinggir jalan, ladang yang menganggur, dan lahan kosong. Cukup cabut akarnya, cuci bersih, dan siap digunakan. Juga tersedia dalam bentuk simplisia di pasar tradisional.</p>
+      <div class="warning-box">⚠️ Pastikan alang-alang dipetik dari area yang bebas pestisida dan polusi. Tidak dianjurkan untuk konsumsi jangka sangat panjang karena kandungan silika dalam jumlah besar. Penderita penyakit ginjal serius wajib konsultasi dokter sebelum menggunakan diuretik herbal apapun.</div>
+    `
+  },
+
+  t10: {
+    emoji: '🫚', kategori: 'Tanaman Obat Jawa Timur · Lempuyang',
+    judul: 'Lempuyang (Zingiber zerumbet) — Rimpang Pahit Penumpas Penyakit Serius',
+    konten: `
+      <p>Lempuyang (<em>Zingiber zerumbet</em>) adalah salah satu tanaman dalam famili Zingiberaceae yang paling penting namun paling jarang dikenal orang awam. Di hutan-hutan Jawa Timur mulai dari lereng Semeru, Ijen, hingga Argopuro, lempuyang tumbuh subur secara liar.</p>
+      <h3>Tiga Jenis Lempuyang di Jawa Timur</h3>
+      <ul>
+        <li><strong>Lempuyang wangi</strong> (<em>Z. zerumbet</em>): Rimpang putih kekuningan, aroma lebih lembut</li>
+        <li><strong>Lempuyang emprit</strong> (<em>Z. amaricans</em>): Rimpang lebih kecil, lebih pahit, digunakan sebagai jamu pegal</li>
+        <li><strong>Lempuyang gajah</strong> (<em>Z. zerumbet</em> var. gajah): Paling besar, digunakan untuk masalah pencernaan berat</li>
+      </ul>
+      <h3>Zerumbone: Senyawa yang Sedang Viral di Dunia Penelitian</h3>
+      <p>Komponen utama lempuyang adalah zerumbone, sesquiterpen monosiklik yang dalam beberapa tahun terakhir menjadi subjek penelitian intensif di universitas-universitas di Malaysia, Jepang, dan Indonesia. Lebih dari 200 publikasi ilmiah tentang zerumbone sudah diterbitkan dalam satu dekade terakhir.</p>
+      <h3>Manfaat yang Sedang Intensif Diteliti</h3>
+      <ul>
+        <li><strong>Anti-kanker (sangat menjanjikan):</strong> Zerumbone menunjukkan aktivitas antitumor pada kanker payudara, usus besar, pankreas, dan hati dalam studi in vitro dan hewan coba</li>
+        <li><strong>Anti-inflamasi kuat:</strong> Menghambat NF-κB lebih potensial dari curcumin dalam beberapa studi</li>
+        <li><strong>Analgesik:</strong> Efektif menurunkan nyeri — digunakan untuk rematik, nyeri otot, dan sakit kepala</li>
+        <li><strong>Antimalaria:</strong> Aktivitas antiplasmodial yang signifikan dalam penelitian in vitro</li>
+        <li><strong>Antiparasit dan antibakteri:</strong> Spektrum luas terhadap berbagai patogen</li>
+      </ul>
+      <h3>Penggunaan Tradisional di Jawa Timur</h3>
+      <div class="highlight-box">
+        🫚 <strong>Jamu Lempuyang Pegal:</strong><br>
+        3 ruas lempuyang emprit + 2 ruas jahe merah + 1 ruas kunyit.<br>
+        Geprek, rebus dalam 500ml air selama 20 menit.<br>
+        Tambah gula jawa dan asam jawa secukupnya.<br>
+        Minum hangat 1 gelas setelah makan untuk nyeri otot dan pegal.
+      </div>
+      <h3>Catatan Penelitian dan Prospek</h3>
+      <p>Meskipun hasil penelitian awal sangat menjanjikan, lempuyang belum melewati uji klinis fase III pada manusia untuk klaim antikanker. Ini bukan berarti tidak berkhasiat — justru ini membuat lempuyang menjadi tanaman yang perlu terus didokumentasikan dan dilestarikan.</p>
+      <div class="warning-box">⚠️ Tidak dianjurkan untuk ibu hamil. Jangan gunakan sebagai pengganti pengobatan kanker yang sudah dijalani. Rasa pahit lempuyang normal dan merupakan tanda kandungan aktifnya — jangan campur terlalu banyak pemanis yang bisa mengurangi manfaat.</div>
+    `
+  }
+
+};
+
+// ── FUNGSI ──
+function bukaModal(id) {
+  const data = artikel[id];
+  if (!data) return;
+  const modal = document.getElementById('modalKonten');
+  modal.innerHTML = `
+    <div class="modal-header">
+      <button class="modal-tutup" onclick="tutupModal()">✕</button>
+      <span class="emoji">${data.emoji}</span>
+      <div class="modal-kategori">${data.kategori}</div>
+      <h2 class="modal-judul">${data.judul}</h2>
+    </div>
+    <div class="modal-content">
+      ${data.konten}
+      <a href="https://wa.me/62816268810?text=Halo%20Kayon%20Herbal%2C%20saya%20baru%20membaca%20artikel%20tentang%20${encodeURIComponent(data.judul)}%20dan%20ingin%20konsultasi" class="modal-wa-btn">
+        💬 Konsultasi Lebih Lanjut via WhatsApp
+      </a>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('aktif');
+  document.body.style.overflow = 'hidden';
+}
+
+function tutupModal() {
+  document.getElementById('modalOverlay').classList.remove('aktif');
+  document.body.style.overflow = '';
+}
+
+function tutupModalLuar(e) {
+  if (e.target === document.getElementById('modalOverlay')) tutupModal();
+}
+
+function filter(kategori) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.kartu').forEach(kartu => {
+    const k = kartu.dataset.kategori;
+    kartu.style.display = (kategori === 'semua' || k === kategori) ? '' : 'none';
+  });
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.kartu').forEach(k => observer.observe(k));
+
+// Tutup modal dengan Escape
+document.addEventListener('keydown', e => { if (e.key === 'Escape') tutupModal(); });
+</script>
+</body>
+</html>
