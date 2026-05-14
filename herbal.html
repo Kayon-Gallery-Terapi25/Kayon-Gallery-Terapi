@@ -73,7 +73,8 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
   }
   .hero-badge {
     display: inline-block;
@@ -395,6 +396,8 @@
   }
   footer a { color: var(--kuning-acc); text-decoration: none; }
 
+  .hidden { display: none !important; }
+
   @media (max-width: 600px) {
     nav ul { display: none; }
     .herbal-grid { grid-template-columns: 1fr; }
@@ -418,7 +421,7 @@
 <section class="hero">
   <div class="hero-badge">🌿 Kearifan Lokal Kediri & Jawa Timur</div>
   <h1>Obat Herbal <em>dari Dapur</em><br>& Pasar Tradisional</h1>
-  <p>Bahan-bahan sederhana yang mudah ditemukan di pasar Kediri ternyata menyimpan manfaat luar biasa untuk kesehatan keluarga.</p>
+  <p>Bahan-bahan sederhana yang mudah ditemukan di pasar Kediri ternyata menyimpan manfaat luar biasa untuk kesehatan keluarga. Database kami mencakup 45+ herbal pilihan.</p>
   <div class="hero-note">
     <span>⚠️</span> Informasi ini bersifat edukasi — konsultasikan dengan tenaga medis untuk kondisi serius
   </div>
@@ -427,429 +430,23 @@
 <!-- FILTER -->
 <div class="filter-section">
   <button class="filter-btn active" onclick="filterKategori('semua', this)">Semua</button>
-  <button class="filter-btn" onclick="filterKategori('imun', this)">🛡 Imunitas</button>
-  <button class="filter-btn" onclick="filterKategori('pencernaan', this)">🫁 Pencernaan</button>
-  <button class="filter-btn" onclick="filterKategori('pegal', this)">💪 Pegal & Nyeri</button>
-  <button class="filter-btn" onclick="filterKategori('demam', this)">🌡 Demam & Flu</button>
-  <button class="filter-btn" onclick="filterKategori('gula', this)">🩸 Gula Darah</button>
+  <button class="filter-btn" onclick="filterKategori('rimpang', this)">🫚 Rimpang</button>
+  <button class="filter-btn" onclick="filterKategori('daun', this)">🌿 Daun</button>
+  <button class="filter-btn" onclick="filterKategori('umbi', this)">🧄 Umbi</button>
+  <button class="filter-btn" onclick="filterKategori('bunga', this)">🌸 Bunga</button>
+  <button class="filter-btn" onclick="filterKategori('buah', this)">🍈 Buah</button>
+  <button class="filter-btn" onclick="filterKategori('rempah', this)">🌾 Rempah</button>
 </div>
 
 <!-- KONTEN UTAMA -->
 <div class="container" id="herbal">
   <p class="section-label">Apotek Hidup</p>
-  <h2 class="section-title">Panduan Ramuan Tradisional</h2>
-  <p class="section-sub">Mudah dibuat di rumah, bahan tersedia di pasar Kediri & sekitarnya</p>
+  <h2 class="section-title">Panduan Ramuan Tradisional Lengkap</h2>
+  <p class="section-sub">45+ herbal pilihan dengan resep lengkap, mudah dibuat di rumah</p>
 
   <div class="herbal-grid" id="herbalGrid">
-
-    <!-- 1. JAHE -->
-    <div class="herbal-card" data-kategori="imun demam pegal">
-      <div class="card-header">
-        <div class="card-icon">🫚</div>
-        <div class="card-header-text">
-          <h3>Jahe Merah</h3>
-          <div class="latin">Zingiber officinale var. rubrum</div>
-          <div class="tags">
-            <span class="tag">Imunitas</span>
-            <span class="tag merah">Demam & Flu</span>
-            <span class="tag">Pegal</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="manfaat-title">Manfaat Utama</div>
-        <ul class="manfaat-list">
-          <li>Menghangatkan tubuh & melancarkan sirkulasi darah</li>
-          <li>Meredakan mual, masuk angin, dan kembung</li>
-          <li>Anti-inflamasi alami untuk nyeri sendi & pegal</li>
-          <li>Meningkatkan daya tahan tubuh</li>
-        </ul>
-        <div class="cara-buat">
-          <div class="cara-buat-title">🧪 Cara Membuat Wedang Jahe</div>
-          <div class="bahan-list">
-            <strong>Bahan-bahan</strong>
-            <ul>
-              <li>3 ruas jahe merah (±30 gram)</li>
-              <li>2 gelas air (400 ml)</li>
-              <li>2 sdm gula merah atau madu</li>
-              <li>1 batang serai (geprek)</li>
-              <li>2 lembar daun jeruk (opsional)</li>
-            </ul>
-          </div>
-          <ol class="langkah-list">
-            <li>Cuci bersih jahe, bakar sebentar di atas kompor lalu geprek</li>
-            <li>Rebus air bersama jahe, serai, dan daun jeruk hingga mendidih</li>
-            <li>Kecilkan api, rebus 10 menit hingga sari keluar</li>
-            <li>Tambahkan gula merah, aduk rata, matikan api</li>
-            <li>Saring dan sajikan hangat. Minum 1–2x sehari</li>
-          </ol>
-          <div class="peringatan">⚠️ Hindari konsumsi berlebihan bagi penderita maag aktif atau ibu hamil trimester pertama.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2. KUNYIT -->
-    <div class="herbal-card" data-kategori="imun pencernaan gula">
-      <div class="card-header">
-        <div class="card-icon">🟡</div>
-        <div class="card-header-text">
-          <h3>Kunyit</h3>
-          <div class="latin">Curcuma longa</div>
-          <div class="tags">
-            <span class="tag kuning">Anti-Inflamasi</span>
-            <span class="tag">Pencernaan</span>
-            <span class="tag">Imunitas</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="manfaat-title">Manfaat Utama</div>
-        <ul class="manfaat-list">
-          <li>Mengandung kurkumin sebagai anti-inflamasi kuat</li>
-          <li>Membantu kesehatan lambung dan usus</li>
-          <li>Menjaga kadar gula darah tetap stabil</li>
-          <li>Mencerahkan kulit dan antioksidan tinggi</li>
-        </ul>
-        <div class="cara-buat">
-          <div class="cara-buat-title">🧪 Cara Membuat Jamu Kunyit Asam</div>
-          <div class="bahan-list">
-            <strong>Bahan-bahan</strong>
-            <ul>
-              <li>3 ruas kunyit (±25 gram)</li>
-              <li>1 sdm asam jawa (pulp tanpa biji)</li>
-              <li>2 gelas air (400 ml)</li>
-              <li>3 sdm gula jawa / gula aren</li>
-              <li>Sedikit garam</li>
-            </ul>
-          </div>
-          <ol class="langkah-list">
-            <li>Bakar/panggang kunyit di atas api sebentar, kupas dan parut atau blender</li>
-            <li>Rebus air hingga mendidih, masukkan kunyit dan asam jawa</li>
-            <li>Rebus 10–15 menit sambil diaduk</li>
-            <li>Tambahkan gula jawa dan sedikit garam</li>
-            <li>Saring, dinginkan, simpan di kulkas. Konsumsi 1 gelas/hari</li>
-          </ol>
-          <div class="peringatan">⚠️ Penggunaan jangka panjang dosis tinggi tidak dianjurkan untuk penderita gangguan empedu.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3. TEMULAWAK -->
-    <div class="herbal-card" data-kategori="pencernaan imun gula">
-      <div class="card-header">
-        <div class="card-icon">🌾</div>
-        <div class="card-header-text">
-          <h3>Temulawak</h3>
-          <div class="latin">Curcuma zanthorrhiza</div>
-          <div class="tags">
-            <span class="tag">Hati & Liver</span>
-            <span class="tag">Pencernaan</span>
-            <span class="tag">Nafsu Makan</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="manfaat-title">Manfaat Utama</div>
-        <ul class="manfaat-list">
-          <li>Melindungi dan meregenerasi sel-sel hati (hepatoprotektif)</li>
-          <li>Menambah nafsu makan — baik untuk anak-anak</li>
-          <li>Melancarkan pencernaan dan mengurangi kembung</li>
-          <li>Menurunkan kolesterol dan trigliserida</li>
-        </ul>
-        <div class="cara-buat">
-          <div class="cara-buat-title">🧪 Cara Membuat Rebusan Temulawak</div>
-          <div class="bahan-list">
-            <strong>Bahan-bahan</strong>
-            <ul>
-              <li>2–3 ruas temulawak segar</li>
-              <li>3 gelas air (600 ml)</li>
-              <li>2 sdm gula batu atau madu</li>
-              <li>1 ruas jahe (opsional)</li>
-              <li>Sedikit kayu manis (opsional)</li>
-            </ul>
-          </div>
-          <ol class="langkah-list">
-            <li>Cuci bersih temulawak, iris tipis-tipis tanpa dikupas</li>
-            <li>Rebus bersama jahe dan kayu manis hingga mendidih</li>
-            <li>Kecilkan api, rebus 15 menit hingga air menyusut jadi 2 gelas</li>
-            <li>Angkat, tambahkan gula batu, aduk hingga larut</li>
-            <li>Saring dan minum selagi hangat, 2x sehari pagi-sore</li>
-          </ol>
-          <div class="peringatan">⚠️ Tidak dianjurkan untuk ibu hamil dan penderita batu empedu.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4. KENCUR -->
-    <div class="herbal-card" data-kategori="pencernaan pegal demam">
-      <div class="card-header">
-        <div class="card-icon">🪨</div>
-        <div class="card-header-text">
-          <h3>Kencur</h3>
-          <div class="latin">Kaempferia galanga</div>
-          <div class="tags">
-            <span class="tag">Batuk</span>
-            <span class="tag">Pencernaan</span>
-            <span class="tag merah">Pegal Linu</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="manfaat-title">Manfaat Utama</div>
-        <ul class="manfaat-list">
-          <li>Melegakan batuk dan radang tenggorokan</li>
-          <li>Mengurangi pegal-pegal setelah bekerja berat</li>
-          <li>Melancarkan pencernaan dan mengatasi diare</li>
-          <li>Menghilangkan bau mulut secara alami</li>
-        </ul>
-        <div class="cara-buat">
-          <div class="cara-buat-title">🧪 Cara Membuat Beras Kencur</div>
-          <div class="bahan-list">
-            <strong>Bahan-bahan</strong>
-            <ul>
-              <li>3 ruas kencur segar</li>
-              <li>3 sdm beras (rendam 1 jam)</li>
-              <li>3 gelas air matang</li>
-              <li>3 sdm gula jawa</li>
-              <li>Sedikit garam & asam jawa</li>
-            </ul>
-          </div>
-          <ol class="langkah-list">
-            <li>Haluskan kencur dan beras rendaman menggunakan blender atau cobek</li>
-            <li>Tambahkan air matang, aduk merata</li>
-            <li>Masak dengan api kecil sambil diaduk agar tidak mengendap</li>
-            <li>Tambahkan gula jawa, garam, dan asam jawa</li>
-            <li>Rebus 10 menit, saring, sajikan hangat atau dingin</li>
-          </ol>
-          <div class="peringatan">⚠️ Konsumsi secukupnya. Tidak dianjurkan untuk ibu hamil muda.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 5. DAUN SIRIH -->
-    <div class="herbal-card" data-kategori="imun pencernaan">
-      <div class="card-header">
-        <div class="card-icon">🍃</div>
-        <div class="card-header-text">
-          <h3>Daun Sirih</h3>
-          <div class="latin">Piper betle</div>
-          <div class="tags">
-            <span class="tag">Antibakteri</span>
-            <span class="tag">Antiseptik</span>
-            <span class="tag">Kewanitaan</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="manfaat-title">Manfaat Utama</div>
-        <ul class="manfaat-list">
-          <li>Antibakteri alami — membantu mengatasi infeksi ringan</li>
-          <li>Air rebusan untuk kesehatan organ kewanitaan</li>
-          <li>Mengatasi bau badan dan bau mulut</li>
-          <li>Membantu penyembuhan luka kecil dan gatal kulit</li>
-        </ul>
-        <div class="cara-buat">
-          <div class="cara-buat-title">🧪 Cara Membuat Rebusan Daun Sirih</div>
-          <div class="bahan-list">
-            <strong>Bahan-bahan</strong>
-            <ul>
-              <li>7–10 lembar daun sirih segar</li>
-              <li>1 liter air bersih</li>
-              <li>Opsional: kapur sirih seujung sendok</li>
-            </ul>
-          </div>
-          <ol class="langkah-list">
-            <li>Cuci bersih daun sirih, potong-potong kasar</li>
-            <li>Rebus dalam 1 liter air hingga mendidih</li>
-            <li>Kecilkan api, rebus 15 menit hingga air berwarna kehijauan</li>
-            <li>Angkat dan dinginkan hingga suam-suam kuku</li>
-            <li>Saring dan gunakan untuk berkumur atau cebok/bilas area intim</li>
-          </ol>
-          <div class="peringatan">⚠️ Hanya untuk pemakaian luar. Jangan dikonsumsi dalam jumlah besar secara rutin.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 6. KAYU MANIS -->
-    <div class="herbal-card" data-kategori="gula imun pencernaan">
-      <div class="card-header">
-        <div class="card-icon">🪵</div>
-        <div class="card-header-text">
-          <h3>Kayu Manis</h3>
-          <div class="latin">Cinnamomum verum</div>
-          <div class="tags">
-            <span class="tag kuning">Gula Darah</span>
-            <span class="tag">Kolesterol</span>
-            <span class="tag">Antioksidan</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="manfaat-title">Manfaat Utama</div>
-        <ul class="manfaat-list">
-          <li>Membantu mengontrol kadar gula darah pada diabetesi</li>
-          <li>Menurunkan kolesterol LDL dan trigliserida</li>
-          <li>Antioksidan kuat — melindungi sel dari kerusakan</li>
-          <li>Meredakan kembung dan gangguan pencernaan</li>
-        </ul>
-        <div class="cara-buat">
-          <div class="cara-buat-title">🧪 Cara Membuat Teh Kayu Manis</div>
-          <div class="bahan-list">
-            <strong>Bahan-bahan</strong>
-            <ul>
-              <li>1–2 batang kayu manis (±5 cm)</li>
-              <li>2 gelas air (400 ml)</li>
-              <li>Madu secukupnya (tambahkan setelah diseduh)</li>
-              <li>1 ruas jahe (opsional)</li>
-            </ul>
-          </div>
-          <ol class="langkah-list">
-            <li>Rebus air bersama batang kayu manis dan jahe</li>
-            <li>Setelah mendidih, kecilkan api rebus 10 menit</li>
-            <li>Angkat dan dinginkan sedikit (jangan panas sekali)</li>
-            <li>Tambahkan madu setelah suhu turun agar enzim madu terjaga</li>
-            <li>Minum 1 gelas setiap pagi sebelum sarapan</li>
-          </ol>
-          <div class="peringatan">⚠️ Penderita diabetes yang mengonsumsi obat harus konsultasi dokter — bisa berinteraksi dengan obat pengontrol gula.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 7. LIDAH BUAYA -->
-    <div class="herbal-card" data-kategori="pencernaan imun">
-      <div class="card-header">
-        <div class="card-icon">🌵</div>
-        <div class="card-header-text">
-          <h3>Lidah Buaya</h3>
-          <div class="latin">Aloe vera</div>
-          <div class="tags">
-            <span class="tag">Pencernaan</span>
-            <span class="tag">Kulit & Rambut</span>
-            <span class="tag">Detoks</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="manfaat-title">Manfaat Utama</div>
-        <ul class="manfaat-list">
-          <li>Menyejukkan lambung dan mengatasi asam lambung ringan</li>
-          <li>Detoksifikasi alami — melancarkan buang air besar</li>
-          <li>Gel untuk luka bakar, jerawat, dan kulit kering</li>
-          <li>Menutrisi rambut dan mengatasi ketombe</li>
-        </ul>
-        <div class="cara-buat">
-          <div class="cara-buat-title">🧪 Cara Membuat Minuman Aloe Vera</div>
-          <div class="bahan-list">
-            <strong>Bahan-bahan</strong>
-            <ul>
-              <li>1 pelepah lidah buaya ukuran sedang</li>
-              <li>2 gelas air matang</li>
-              <li>Madu atau gula batu secukupnya</li>
-              <li>Perasan jeruk nipis</li>
-            </ul>
-          </div>
-          <ol class="langkah-list">
-            <li>Kupas kulit lidah buaya, ambil gelnya saja</li>
-            <li>Rendam gel dalam air garam 10 menit, bilas bersih (menghilangkan getah pahit)</li>
-            <li>Potong dadu kecil atau blender halus sesuai selera</li>
-            <li>Campur dengan air matang, madu, dan perasan jeruk nipis</li>
-            <li>Aduk rata, sajikan dingin. Konsumsi maksimal 1–2x seminggu</li>
-          </ol>
-          <div class="peringatan">⚠️ Tidak untuk ibu hamil dan menyusui. Konsumsi berlebihan bisa menyebabkan diare.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 8. BAWANG PUTIH -->
-    <div class="herbal-card" data-kategori="imun demam gula">
-      <div class="card-header">
-        <div class="card-icon">🧄</div>
-        <div class="card-header-text">
-          <h3>Bawang Putih</h3>
-          <div class="latin">Allium sativum</div>
-          <div class="tags">
-            <span class="tag">Tekanan Darah</span>
-            <span class="tag merah">Antibiotik Alami</span>
-            <span class="tag">Imunitas</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="manfaat-title">Manfaat Utama</div>
-        <ul class="manfaat-list">
-          <li>Allicin dalam bawang putih bersifat antibakteri & antivirus</li>
-          <li>Membantu menurunkan tekanan darah tinggi</li>
-          <li>Menurunkan kolesterol dan melindungi jantung</li>
-          <li>Memperkuat sistem imun saat musim flu</li>
-        </ul>
-        <div class="cara-buat">
-          <div class="cara-buat-title">🧪 Cara Konsumsi Bawang Putih Mentah</div>
-          <div class="bahan-list">
-            <strong>Bahan-bahan</strong>
-            <ul>
-              <li>2–3 siung bawang putih segar</li>
-              <li>Madu 1 sdm (sebagai penutup rasa)</li>
-              <li>Air hangat 1 gelas</li>
-            </ul>
-          </div>
-          <ol class="langkah-list">
-            <li>Kupas dan cincang halus atau geprek 2–3 siung bawang putih</li>
-            <li>Diamkan 10–15 menit setelah dicincang (mengaktifkan allicin)</li>
-            <li>Telan langsung dengan air hangat, atau campur dengan madu</li>
-            <li>Konsumsi pagi hari sebelum makan</li>
-            <li>Alternatif: bisa juga direbus menjadi teh atau ditambah ke sup</li>
-          </ol>
-          <div class="peringatan">⚠️ Makan mentah bisa mengiritasi lambung bagi sebagian orang. Mulai dari 1 siung dulu jika belum terbiasa.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 9. DAUN SAMBILOTO -->
-    <div class="herbal-card" data-kategori="imun demam gula">
-      <div class="card-header">
-        <div class="card-icon">🌿</div>
-        <div class="card-header-text">
-          <h3>Sambiloto</h3>
-          <div class="latin">Andrographis paniculata</div>
-          <div class="tags">
-            <span class="tag">Raja Pahit</span>
-            <span class="tag kuning">Gula Darah</span>
-            <span class="tag merah">Demam</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="manfaat-title">Manfaat Utama</div>
-        <ul class="manfaat-list">
-          <li>Antipiretik alami — menurunkan demam dengan cepat</li>
-          <li>Membantu mengontrol kadar gula darah</li>
-          <li>Antivirus dan antibakteri — populer saat pandemi</li>
-          <li>Membantu pemulihan dari infeksi saluran pernapasan</li>
-        </ul>
-        <div class="cara-buat">
-          <div class="cara-buat-title">🧪 Cara Membuat Rebusan Sambiloto</div>
-          <div class="bahan-list">
-            <strong>Bahan-bahan</strong>
-            <ul>
-              <li>10–15 lembar daun sambiloto segar</li>
-              <li>3 gelas air (600 ml)</li>
-              <li>Madu untuk mengurangi rasa pahit</li>
-              <li>1 ruas jahe (opsional)</li>
-            </ul>
-          </div>
-          <ol class="langkah-list">
-            <li>Cuci bersih daun sambiloto dengan air mengalir</li>
-            <li>Rebus bersama jahe dalam air hingga mendidih</li>
-            <li>Kecilkan api, rebus 15–20 menit hingga tersisa 2 gelas</li>
-            <li>Angkat, saring, tambahkan madu secukupnya</li>
-            <li>Minum 2x sehari selama 5–7 hari saat sakit (jangan konsumsi terus-menerus)</li>
-          </ol>
-          <div class="peringatan">⚠️ Tidak untuk ibu hamil, menyusui, dan penderita penyakit autoimun. Rasanya sangat pahit — itu normal.</div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- end herbal-grid -->
+    <!-- Herbal cards akan diisi oleh JavaScript -->
+  </div>
 
   <!-- CTA KONSULTASI -->
   <div class="info-box">
@@ -864,7 +461,7 @@
   </div>
 
   <p class="disclaimer">
-    <strong>Disclaimer:</strong> Informasi herbal di halaman ini bersifat edukatif berdasarkan pengetahuan tradisional dan penelitian umum. Tidak dimaksudkan sebagai pengganti diagnosis atau pengobatan medis profesional. Selalu konsultasikan dengan dokter atau tenaga kesehatan untuk kondisi penyakit yang serius.
+    <strong>Disclaimer:</strong> Informasi herbal di halaman ini bersifat edukatif berdasarkan pengetahuan tradisional dan penelitian umum. Tidak dimaksudkan sebagai pengganti diagnosis atau pengobatan profesional medis. Konsultasikan dengan dokter atau praktisi kesehatan sebelum menggunakan herbal, terutama jika Anda sedang hamil, menyusui, atau mengonsumsi obat tertentu.
   </p>
 
 </div>
@@ -873,19 +470,100 @@
   <p>© 2024 Kayon Gallery Terapi — Dikelola oleh Risqi Maulana &nbsp;|&nbsp; <a href="index.html">Kembali ke Beranda</a></p>
 </footer>
 
+<!-- Include Database -->
+<script src="herbal-data-lengkap.js"></script>
+
 <script>
+// Render herbal cards dari database
+function renderHerbalCards(filteredData = herbalDatabase) {
+  const grid = document.getElementById('herbalGrid');
+  grid.innerHTML = '';
+
+  filteredData.forEach(herbal => {
+    const kategoriBadges = getKategoriBadges(herbal.kategori);
+    
+    const card = document.createElement('div');
+    card.className = 'herbal-card';
+    card.setAttribute('data-kategori', herbal.kategori);
+    
+    const manfaatHTML = herbal.manfaat.map(m => `<li>${m}</li>`).join('');
+    const bahanHTML = herbal.resep.bahan.map(b => `<li>${b}</li>`).join('');
+    const langkahHTML = herbal.resep.cara.map(l => `<li>${l}</li>`).join('');
+    
+    card.innerHTML = `
+      <div class="card-header">
+        <div class="card-icon">${herbal.emoji}</div>
+        <div class="card-header-text">
+          <h3>${herbal.nama}</h3>
+          <div class="latin">${herbal.namaLatin}</div>
+          <div class="tags">
+            ${kategoriBadges.map(badge => `<span class="tag ${badge.class}">${badge.label}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="manfaat-title">Manfaat Utama</div>
+        <ul class="manfaat-list">
+          ${manfaatHTML}
+        </ul>
+        <div class="cara-buat">
+          <div class="cara-buat-title">🧪 Cara Membuat ${herbal.resep.nama}</div>
+          <div class="bahan-list">
+            <strong>Bahan-bahan</strong>
+            <ul>
+              ${bahanHTML}
+            </ul>
+          </div>
+          <ol class="langkah-list">
+            ${langkahHTML}
+          </ol>
+          <div class="peringatan">⚠️ ${herbal.peringatan}</div>
+        </div>
+      </div>
+    `;
+    
+    grid.appendChild(card);
+  });
+}
+
+// Mapping kategori ke badge display
+function getKategoriBadges(kategori) {
+  const badges = {
+    'rimpang': { label: 'Rimpang', class: '' },
+    'umbi': { label: 'Umbi', class: '' },
+    'daun': { label: 'Daun', class: '' },
+    'bunga': { label: 'Bunga', class: '' },
+    'kulit-kayu': { label: 'Kulit Kayu', class: '' },
+    'buah': { label: 'Buah', class: '' },
+    'tanaman': { label: 'Tanaman', class: '' },
+    'akar': { label: 'Akar', class: '' },
+    'rempah': { label: 'Rempah', class: '' },
+    'biji': { label: 'Biji', class: '' }
+  };
+  
+  return kategori.split(' ').map(k => badges[k] || { label: k, class: '' });
+}
+
+// Filter kategori
 function filterKategori(kat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  const cards = document.querySelectorAll('.herbal-card');
-  cards.forEach(card => {
-    if (kat === 'semua' || card.dataset.kategori.includes(kat)) {
-      card.style.display = '';
-    } else {
-      card.style.display = 'none';
-    }
-  });
+  
+  let filtered;
+  if (kat === 'semua') {
+    filtered = herbalDatabase;
+  } else {
+    filtered = herbalDatabase.filter(h => h.kategori === kat);
+  }
+  
+  renderHerbalCards(filtered);
 }
+
+// Render initial cards
+document.addEventListener('DOMContentLoaded', () => {
+  renderHerbalCards();
+});
 </script>
+
 </body>
 </html>
